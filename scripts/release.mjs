@@ -1,0 +1,3 @@
+import {readFile} from 'node:fs/promises';
+export async function releaseInfo(){const pkg=JSON.parse(await readFile(new URL('../package.json',import.meta.url),'utf8'));if(!/^\d+\.\d+\.\d+(?:-[\da-z.-]+)?$/i.test(pkg.version))throw new Error('Invalid release version');return {version:pkg.version,label:`v${pkg.version}`};}
+export function stampRelease(html,release){return html.replace(/(<meta name="application-version" content=")[^"]*("\s*\/?>)/,(_,prefix,suffix)=>prefix+release.version+suffix).replace(/(<span id="game-version"[^>]*>)[^<]*(<\/span>)/,(_,prefix,suffix)=>prefix+release.label+suffix);}

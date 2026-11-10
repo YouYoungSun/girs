@@ -1,3 +1,4 @@
+import {releaseKey,validVersion,releaseStatus,fetchRelease} from './release.js';
 import {endingArt} from './life/art.js';
 import {freeTimeText,wounds,relationLabel} from './life/relationships.js';
 import {characters,days,visits,createGame,currentScene,sceneText,choose,advance,character,format,choiceOrder,tiers,validGame,availableVisits,visit,contact,confess,result,relation} from './engine.js';
@@ -19,6 +20,22 @@ function close(){modal.close();}
 function nav(){$('continue-nav').disabled=!game&&!loadGame();$('collection-count').textContent=`${unlocked().length}/21`;}
 function save(){saveGame(game);nav();}
 function prose(text,container,context=game){for(const line of(context?format(text,context):text).split('\n').filter(Boolean)){const p=line.indexOf('|');if(p>0&&p<15){const row=el('div','dialogue');row.append(el('span','speaker',line.slice(0,p)),el('p','',line.slice(p+1)));container.append(row);}else container.append(el('p','narration',line));}}
+function setupReleaseNotice(){
+ const version=document.querySelector('meta[name="application-version"]')?.content;
+ if(!validVersion(version))return;
+ const badge=$('game-version'),notice=$('release-notice'),message=$('release-message'),reload=$('release-reload'),dismiss=$('release-dismiss');
+ badge.textContent=`v${version}`;badge.setAttribute('aria-label',`현재 게임 버전 v${version}`);badge.title=`현재 실행 중인 게임 · v${version}`;
+ let previous=null;try{previous=localStorage.getItem(releaseKey);}catch{}
+ let ignored=null,polling=false;
+ const show=status=>{if(!status||ignored===status.kind+status.version||(!notice.hidden&&notice.dataset.release===status.kind+status.version))return;message.textContent=status.message;reload.hidden=status.kind!=='available';notice.hidden=false;notice.dataset.release=status.kind+status.version;};
+ show(releaseStatus(version,null,previous));
+ try{localStorage.setItem(releaseKey,version);}catch{}
+ reload.addEventListener('click',()=>window.location.reload());
+ dismiss.addEventListener('click',()=>{ignored=notice.dataset.release;notice.hidden=true;});
+ const check=async()=>{if(polling||document.hidden)return;polling=true;try{const remote=await fetchRelease();show(releaseStatus(version,remote,null));}finally{polling=false;}};
+ check();setInterval(check,60000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)check();});window.addEventListener('focus',check);
+}
+setupReleaseNotice();
 function begin(){open('한 달 동안, 뭐라고 부르면 될까?');const form=el('form','start-form'),label=el('label','','당신의 이름 또는 별명');label.htmlFor='player-name';const input=el('input');input.id='player-name';input.maxLength=12;input.required=true;input.placeholder='최대 12자';input.autocomplete='off';input.value=game?.name||read('playerName','');form.append(label,input,el('p','modal-description','지금은 누구도 고르지 않아요. 같이 밥 먹고, 놀고, 연락하며 지내다가 마지막 날 마음을 전할 사람을 정하세요.'));
  if(loadGame())form.append(el('p','save-warning','새로 시작하면 자동 책갈피가 바뀝니다. 지금 이야기를 남기려면 책갈피에 따로 저장해주세요.'));
  const submit=el('button','primary-button','달무리회관에 입주하기 ↗');submit.type='submit';form.append(submit);form.addEventListener('submit',e=>{e.preventDefault();if(!input.value.trim()){input.setCustomValidity('불러드릴 이름을 입력해주세요.');input.reportValidity();return;}game=createGame(input.value);write('playerName',game.name);close();save();render();top();focusTitle();});input.addEventListener('input',()=>input.setCustomValidity(''));body.append(form);input.focus();}
