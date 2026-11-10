@@ -6,7 +6,7 @@ import {characters,days,visits,createGame,currentScene,choose,advance,availableV
 import {messageEvent} from '../src/life/messages.js';
 import {confessionEvent,finalResult,endingKeys} from '../src/life/finale.js';
 
-function chooseFor(g,target,goal){const cs=currentScene(g).choices;const wanted=g.bonds[target]<goal;let winner=0;for(let i=1;i<cs.length;i++){const a=cs[i].effects[target]||0,b=cs[winner].effects[target]||0;if(wanted?a>b:a<b)winner=i;}return winner;}
+function chooseFor(g,target,goal){const cs=currentScene(g).choices;const wanted=goal===96||g.bonds[target]<goal;let winner=0;for(let i=1;i<cs.length;i++){const a=cs[i].effects[target]||0,b=cs[winner].effects[target]||0;if(wanted?a>b:a<b)winner=i;}return winner;}
 function campaign(target,goal){
  let g=createGame('여름'),steps=0;
  while(g.phase!=='confession'){
@@ -16,6 +16,7 @@ function campaign(target,goal){
    else if(g.phase==='activity'){
      const choices=availableVisits(g);assert.ok(choices.length,'at least one unseen activity every day');
      const want=g.bonds[target]<goal;
+     if(goal===96){const own=choices.find(e=>e.lane===target);if(own){g=visit(g,own.id);continue;}}
      choices.sort((a,b)=>{
        const av=Math.max(...a.choices.map(c=>c.effects[target]||0)),bv=Math.max(...b.choices.map(c=>c.effects[target]||0));
        return want?bv-av:av-bv;

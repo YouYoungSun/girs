@@ -1,3 +1,4 @@
+import {resolveScene,relationshipTier} from './life/relationships.js';
 import {characters} from './story/helpers.js';
 import {days} from './life/days.js';
 import {visits} from './life/visits.js';
@@ -15,10 +16,10 @@ export function createGame(name){
  return{version:VERSION,name:clean,day:1,beat:'morning',phase:'story',eventId:'day-1',focus:null,choice:null,bonds:Object.fromEntries(characters.map(c=>[c.id,25])),flags:[],seen:[],history:[],updatedAt:Date.now()};
 }
 export function currentScene(g){
- if(g.beat==='morning'&&g.eventId===`day-${g.day}`)return days[g.day-1];
- if(g.beat==='free')return visits.find(e=>e.id===g.eventId);
- if(g.beat==='night'&&g.eventId?.startsWith('message-')){const parts=g.eventId.split('-'),id=parts[1];if(character(id)&&Number(parts[2])===g.day/7-1)return messageEvent(id,g.day/7-1,g.bonds[id]);}
- if(g.beat==='confession'&&character(g.focus))return confessionEvent(g.focus,g.bonds[g.focus]);
+ if(g.beat==='morning'&&g.eventId===`day-${g.day}`)return resolveScene(days[g.day-1],g);
+ if(g.beat==='free')return resolveScene(visits.find(e=>e.id===g.eventId),g);
+ if(g.beat==='night'&&g.eventId?.startsWith('message-')){const parts=g.eventId.split('-'),id=parts[1];if(character(id)&&Number(parts[2])===g.day/7-1)return messageEvent(id,g.day/7-1,g.bonds[id],g);}
+ if(g.beat==='confession'&&character(g.focus))return confessionEvent(g.focus,g.bonds[g.focus],g);
  return undefined;
 }
 export const relation=n=>n>=85?'당신을 특별하게 바라보는 사이':n>=65?'둘만의 약속이 생긴 사이':n>=40?'먼저 안부가 궁금한 사이':'서로 알아가는 사이';
@@ -75,7 +76,7 @@ export function confess(g,id){
  if(id===null){n.phase='ending';n.eventId=null;n.beat='confession';return n;}
  n.beat='confession';n.phase='story';n.eventId=`confession-${id}`;return n;
 }
-export const result=g=>finalResult(g.focus,g.focus?endingTier(g.bonds[g.focus]):'friendship',g.flags);
+export const result=g=>finalResult(g.focus,g.focus?relationshipTier(g,endingTier(g.bonds[g.focus])):'friendship',g.flags);
 export function validGame(g){
  try{
  if(!g||g.version!==VERSION||typeof g.name!=='string'||!g.name.trim()||g.name.length>12)return false;

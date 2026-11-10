@@ -1,0 +1,1 @@
+﻿export const endingArt=(focus,tier)=>({src:`./assets/endings/${focus||'group'}-${tier}.webp`,alt:focus?`${{harin:'하린',sea:'세아',yujin:'유진',seoyun:'서윤',isol:'이솔'}[focus]} · ${{best:'서로 가까이 마음을 나누는',good:'설레는 첫 만남',normal:'다정한 거리를 지키는',bad:'거리를 두고 작별하는'}[tier]} 엔딩 장면`:'달무리회관의 여섯 자리가 차려진 저녁 식탁'});

@@ -1,0 +1,195 @@
+{
+  "mode": "built-in image_gen",
+  "images": [
+    {
+      "id": "harin",
+      "tier": "best",
+      "prompt": "Reference-matched Harin, intimate breakfast table, affectionate smile, Best ending pixel-art CG.",
+      "hint": "Generated images are saved to C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0 as C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-414c1c14-9ea2-41cb-bd04-47b6a968714a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-414c1c14-9ea2-41cb-bd04-47b6a968714a.png",
+      "original": "docs/ending-originals/harin-best.png",
+      "asset": "assets/endings/harin-best.webp"
+    },
+    {
+      "id": "harin",
+      "tier": "good",
+      "prompt": "One standalone landscape 16:9 ending CG for Korean adult romance visual novel. Match identity, face, hair, age, adult proportions, outfit and handcrafted detailed 16-bit pixel art of supplied character reference(s) precisely. Crisp visible square pixels, plum outlines, restrained nostalgic summer palette, scenic opaque background. Scene: bakery holiday date, shy bright smile reaching her hand toward viewer, beginning of romance, warm afternoon. Exactly one adult woman matching reference; first person player viewpoint, no visible protagonist face or body. Emotional staging and distance must be unmistakable. No words, letters, caption, watermark, panels, collage. Complete background.",
+      "hint": "Generated images are saved to C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0 as C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-195acf09-5593-4c54-9a59-468a6b095467.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-195acf09-5593-4c54-9a59-468a6b095467.png",
+      "original": "docs/ending-originals/harin-good.png",
+      "asset": "assets/endings/harin-good.webp"
+    },
+    {
+      "id": "harin",
+      "tier": "normal",
+      "prompt": "One standalone landscape 16:9 ending CG for Korean adult romance visual novel. Match identity, face, hair, age, adult proportions, outfit and handcrafted detailed 16-bit pixel art of supplied character reference(s) precisely. Crisp visible square pixels, plum outlines, restrained nostalgic summer palette, scenic opaque background. Scene: across bakery counter offering a bread bag, kind restrained smile, polite physical distance, daylight. Exactly one adult woman matching reference; first person player viewpoint, no visible protagonist face or body. Emotional staging and distance must be unmistakable. No words, letters, caption, watermark, panels, collage. Complete background.",
+      "hint": "Generated images are saved to C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0 as C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-2e7f6989-7f4d-4f2f-acc1-38e517f06c16.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-2e7f6989-7f4d-4f2f-acc1-38e517f06c16.png",
+      "original": "docs/ending-originals/harin-normal.png",
+      "asset": "assets/endings/harin-normal.webp"
+    },
+    {
+      "id": "harin",
+      "tier": "bad",
+      "prompt": "One standalone landscape 16:9 ending CG for Korean adult romance visual novel. Match identity, face, hair, age, adult proportions, outfit and handcrafted detailed 16-bit pixel art of supplied character reference(s) precisely. Crisp visible square pixels, plum outlines, restrained nostalgic summer palette, scenic opaque background. Scene: last bread bag on counter, she turns away toward empty breakfast table, distant downcast gaze, cool dawn, final farewell, no tears. Exactly one adult woman matching reference; first person player viewpoint, no visible protagonist face or body. Emotional staging and distance must be unmistakable. No words, letters, caption, watermark, panels, collage. Complete background.",
+      "hint": "Generated images are saved to C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0 as C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-fd7d2715-4e5c-44bc-a03e-2e6d10fa80ab.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-fd7d2715-4e5c-44bc-a03e-2e6d10fa80ab.png",
+      "original": "docs/ending-originals/harin-bad.png",
+      "asset": "assets/endings/harin-bad.webp"
+    },
+    {
+      "id": "sea",
+      "tier": "best",
+      "prompt": "One standalone landscape 16:9 ending CG for Korean adult romance visual novel. Match identity, face, hair, age, adult proportions, outfit and handcrafted detailed 16-bit pixel art of supplied character reference(s) precisely. Crisp visible square pixels, plum outlines, restrained nostalgic summer palette, scenic opaque background. Scene: after closing bar, sitting intimately close beside viewer outside counter, direct affectionate vulnerable smile, warm amber lamp, reaching hand. Exactly one adult woman matching reference; first person player viewpoint, no visible protagonist face or body. Emotional staging and distance must be unmistakable. No words, letters, caption, watermark, panels, collage. Complete background.",
+      "hint": "Generated images are saved to C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0 as C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-4af273f6-6812-43ca-89ad-da7ec1739c60.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-4af273f6-6812-43ca-89ad-da7ec1739c60.png",
+      "original": "docs/ending-originals/sea-best.png",
+      "asset": "assets/endings/sea-best.webp"
+    },
+    {
+      "id": "sea",
+      "tier": "good",
+      "prompt": "One standalone landscape 16:9 ending CG for Korean adult romance visual novel. Match identity, face, hair, age, adult proportions, outfit and handcrafted detailed 16-bit pixel art of supplied character reference(s) precisely. Crisp visible square pixels, plum outlines, restrained nostalgic summer palette, scenic opaque background. Scene: first date outside bar at seaside cafe, shy playful smile approaching viewer, sunset. Exactly one adult woman matching reference; first person player viewpoint, no visible protagonist face or body. Emotional staging and distance must be unmistakable. No words, letters, caption, watermark, panels, collage. Complete background.",
+      "hint": "Generated images are saved to C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0 as C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-c2a65e65-ee80-497e-987e-6d4b986bb907.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-c2a65e65-ee80-497e-987e-6d4b986bb907.png",
+      "original": "docs/ending-originals/sea-good.png",
+      "asset": "assets/endings/sea-good.webp"
+    },
+    {
+      "id": "sea",
+      "tier": "normal",
+      "prompt": "One standalone landscape 16:9 ending CG for Korean adult romance visual novel. Match identity, face, hair, age, adult proportions, outfit and handcrafted detailed 16-bit pixel art of supplied character reference(s) precisely. Crisp visible square pixels, plum outlines, restrained nostalgic summer palette, scenic opaque background. Scene: behind bar counter serving soda to viewer, kind professional smile, clear counter separating her, calm afternoon. Exactly one adult woman matching reference; first person player viewpoint, no visible protagonist face or body. Emotional staging and distance must be unmistakable. No words, letters, caption, watermark, panels, collage. Complete background.",
+      "hint": "Generated images are saved to C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0 as C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-3d981135-087f-4e4e-b27d-4c87c8a86a8e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-3d981135-087f-4e4e-b27d-4c87c8a86a8e.png",
+      "original": "docs/ending-originals/sea-normal.png",
+      "asset": "assets/endings/sea-normal.webp"
+    },
+    {
+      "id": "sea",
+      "tier": "bad",
+      "prompt": "Reference-matched Sea BAD CG: closed bar, distant turned away, no drink in hands, firm final farewell, cool blue negative space, pixel art, no lettering.",
+      "hint": "Generated images are saved to C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0 as C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-e36a2778-ed3d-41c4-b055-17e97f52c0fa.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-8fcd5a1d-57cb-4dd2-a217-7322aadbf649.png",
+      "original": "docs/ending-originals/sea-bad.png",
+      "asset": "assets/endings/sea-bad.webp",
+      "discardedSource": "C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-e36a2778-ed3d-41c4-b055-17e97f52c0fa.png"
+    },
+    {
+      "id": "yujin",
+      "tier": "best",
+      "prompt": "One standalone landscape 16:9 ending CG for Korean adult romance visual novel. Match identity, face, hair, age, adult proportions, outfit and handcrafted detailed 16-bit pixel art of supplied character reference(s) precisely. Crisp visible square pixels, plum outlines, restrained nostalgic summer palette, scenic opaque background. Scene: at library table, book closed beside her, leaning intimately toward viewer with affectionate direct smile, warm golden lamp. Exactly one adult woman matching reference; first person player viewpoint, no visible protagonist face or body. Emotional staging and distance must be unmistakable. No words, letters, caption, watermark, panels, collage. Complete background.",
+      "hint": "Generated images are saved to C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0 as C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-78f95899-551a-45c2-813a-930f9ed7536f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-78f95899-551a-45c2-813a-930f9ed7536f.png",
+      "original": "docs/ending-originals/yujin-best.png",
+      "asset": "assets/endings/yujin-best.webp"
+    },
+    {
+      "id": "yujin",
+      "tier": "good",
+      "prompt": "One standalone landscape 16:9 ending CG for Korean adult romance visual novel. Match identity, face, hair, age, adult proportions, outfit and handcrafted detailed 16-bit pixel art of supplied character reference(s) precisely. Crisp visible square pixels, plum outlines, restrained nostalgic summer palette, scenic opaque background. Scene: waiting outside cinema holding two blank tickets, nervous happy smile, beginning romance, evening lights. Exactly one adult woman matching reference; first person player viewpoint, no visible protagonist face or body. Emotional staging and distance must be unmistakable. No words, letters, caption, watermark, panels, collage. Complete background.",
+      "hint": "Generated images are saved to C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0 as C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-734b2ea4-5824-48e4-afda-d48b4b448952.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-734b2ea4-5824-48e4-afda-d48b4b448952.png",
+      "original": "docs/ending-originals/yujin-good.png",
+      "asset": "assets/endings/yujin-good.webp"
+    },
+    {
+      "id": "yujin",
+      "tier": "normal",
+      "prompt": "One standalone landscape 16:9 ending CG for Korean adult romance visual novel. Match identity, face, hair, age, adult proportions, outfit and handcrafted detailed 16-bit pixel art of supplied character reference(s) precisely. Crisp visible square pixels, plum outlines, restrained nostalgic summer palette, scenic opaque background. Scene: across archive desk discussing a closed book, kind gentle smile with respectful distance, daylight. Exactly one adult woman matching reference; first person player viewpoint, no visible protagonist face or body. Emotional staging and distance must be unmistakable. No words, letters, caption, watermark, panels, collage. Complete background.",
+      "hint": "Generated images are saved to C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0 as C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-58fbb97c-1b2d-433c-a639-f58bb1ed6cbd.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-58fbb97c-1b2d-433c-a639-f58bb1ed6cbd.png",
+      "original": "docs/ending-originals/yujin-normal.png",
+      "asset": "assets/endings/yujin-normal.webp"
+    },
+    {
+      "id": "yujin",
+      "tier": "bad",
+      "prompt": "One standalone landscape 16:9 ending CG for Korean adult romance visual novel. Match identity, face, hair, age, adult proportions, outfit and handcrafted detailed 16-bit pixel art of supplied character reference(s) precisely. Crisp visible square pixels, plum outlines, restrained nostalgic summer palette, scenic opaque background. Scene: closing book and holding bag, distant polite farewell, empty opposite chair, cool archive room twilight. Exactly one adult woman matching reference; first person player viewpoint, no visible protagonist face or body. Emotional staging and distance must be unmistakable. No words, letters, caption, watermark, panels, collage. Complete background.",
+      "hint": "Generated images are saved to C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0 as C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-9ea6fc1f-78e1-4ef0-97bc-f2dd8dda1033.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-9ea6fc1f-78e1-4ef0-97bc-f2dd8dda1033.png",
+      "original": "docs/ending-originals/yujin-bad.png",
+      "asset": "assets/endings/yujin-bad.webp"
+    },
+    {
+      "id": "seoyun",
+      "tier": "best",
+      "prompt": "One standalone landscape 16:9 ending CG for Korean adult romance visual novel. Match identity, face, hair, age, adult proportions, outfit and handcrafted detailed 16-bit pixel art of supplied character reference(s) precisely. Crisp visible square pixels, plum outlines, restrained nostalgic summer palette, scenic opaque background. Scene: seaside travel bench, leaning close toward viewer, affectionate relaxed mature smile, warm sunset, no other visible person. Exactly one adult woman matching reference; first person player viewpoint, no visible protagonist face or body. Emotional staging and distance must be unmistakable. No words, letters, caption, watermark, panels, collage. Complete background.",
+      "hint": "Generated images are saved to C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0 as C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-2837f75d-3054-4a5e-b237-712644fa7f9a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-2837f75d-3054-4a5e-b237-712644fa7f9a.png",
+      "original": "docs/ending-originals/seoyun-best.png",
+      "asset": "assets/endings/seoyun-best.webp"
+    },
+    {
+      "id": "seoyun",
+      "tier": "good",
+      "prompt": "One standalone landscape 16:9 ending CG for Korean adult romance visual novel. Match identity, face, hair, age, adult proportions, outfit and handcrafted detailed 16-bit pixel art of supplied character reference(s) precisely. Crisp visible square pixels, plum outlines, restrained nostalgic summer palette, scenic opaque background. Scene: woodworking studio date, playfully reaching hand toward viewer, happy shy smile, daylight. Exactly one adult woman matching reference; first person player viewpoint, no visible protagonist face or body. Emotional staging and distance must be unmistakable. No words, letters, caption, watermark, panels, collage. Complete background.",
+      "hint": "Generated images are saved to C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0 as C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-15bddee9-9b6e-4f47-84c7-4d9fa94a5d4a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-15bddee9-9b6e-4f47-84c7-4d9fa94a5d4a.png",
+      "original": "docs/ending-originals/seoyun-good.png",
+      "asset": "assets/endings/seoyun-good.webp"
+    },
+    {
+      "id": "seoyun",
+      "tier": "normal",
+      "prompt": "One standalone landscape 16:9 ending CG for Korean adult romance visual novel. Match identity, face, hair, age, adult proportions, outfit and handcrafted detailed 16-bit pixel art of supplied character reference(s) precisely. Crisp visible square pixels, plum outlines, restrained nostalgic summer palette, scenic opaque background. Scene: across courtyard tea table, gentle mature kind smile, clear respectful distance, afternoon. Exactly one adult woman matching reference; first person player viewpoint, no visible protagonist face or body. Emotional staging and distance must be unmistakable. No words, letters, caption, watermark, panels, collage. Complete background.",
+      "hint": "Generated images are saved to C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0 as C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-2fe5dc1b-88f8-4252-b55e-ddb441e218da.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-2fe5dc1b-88f8-4252-b55e-ddb441e218da.png",
+      "original": "docs/ending-originals/seoyun-normal.png",
+      "asset": "assets/endings/seoyun-normal.webp"
+    },
+    {
+      "id": "seoyun",
+      "tier": "bad",
+      "prompt": "One standalone landscape 16:9 ending CG for Korean adult romance visual novel. Match identity, face, hair, age, adult proportions, outfit and handcrafted detailed 16-bit pixel art of supplied character reference(s) precisely. Crisp visible square pixels, plum outlines, restrained nostalgic summer palette, scenic opaque background. Scene: putting keys into bag, distant firm farewell, empty opposite courtyard chair, cool dusk. Exactly one adult woman matching reference; first person player viewpoint, no visible protagonist face or body. Emotional staging and distance must be unmistakable. No words, letters, caption, watermark, panels, collage. Complete background.",
+      "hint": "Generated images are saved to C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0 as C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-7785dc8d-dea9-418b-bcfe-07380dd07c39.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-7785dc8d-dea9-418b-bcfe-07380dd07c39.png",
+      "original": "docs/ending-originals/seoyun-bad.png",
+      "asset": "assets/endings/seoyun-bad.webp"
+    },
+    {
+      "id": "isol",
+      "tier": "best",
+      "prompt": "One standalone landscape 16:9 ending CG for Korean adult romance visual novel. Match identity, face, hair, age, adult proportions, outfit and handcrafted detailed 16-bit pixel art of supplied character reference(s) precisely. Crisp visible square pixels, plum outlines, restrained nostalgic summer palette, scenic opaque background. Scene: sound studio rooftop evening, recorder placed aside on table, affectionately reaching hand toward viewer, intimate close distance, warm lavender sunset. Exactly one adult woman matching reference; first person player viewpoint, no visible protagonist face or body. Emotional staging and distance must be unmistakable. No words, letters, caption, watermark, panels, collage. Complete background.",
+      "hint": "Generated images are saved to C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0 as C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-7837ba93-a19c-4ba5-9da5-b0a82a8833af.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-7837ba93-a19c-4ba5-9da5-b0a82a8833af.png",
+      "original": "docs/ending-originals/isol-best.png",
+      "asset": "assets/endings/isol-best.webp"
+    },
+    {
+      "id": "isol",
+      "tier": "good",
+      "prompt": "One standalone landscape 16:9 ending CG for Korean adult romance visual novel. Match identity, face, hair, age, adult proportions, outfit and handcrafted detailed 16-bit pixel art of supplied character reference(s) precisely. Crisp visible square pixels, plum outlines, restrained nostalgic summer palette, scenic opaque background. Scene: meeting after radio broadcast, outside studio, rare bright shy smile reaching hand, beginning romance. Exactly one adult woman matching reference; first person player viewpoint, no visible protagonist face or body. Emotional staging and distance must be unmistakable. No words, letters, caption, watermark, panels, collage. Complete background.",
+      "hint": "Generated images are saved to C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0 as C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-a9f7853c-c8d5-4831-ac0d-6a23b7fc1e88.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-a9f7853c-c8d5-4831-ac0d-6a23b7fc1e88.png",
+      "original": "docs/ending-originals/isol-good.png",
+      "asset": "assets/endings/isol-good.webp"
+    },
+    {
+      "id": "isol",
+      "tier": "normal",
+      "prompt": "One standalone landscape 16:9 ending CG for Korean adult romance visual novel. Match identity, face, hair, age, adult proportions, outfit and handcrafted detailed 16-bit pixel art of supplied character reference(s) precisely. Crisp visible square pixels, plum outlines, restrained nostalgic summer palette, scenic opaque background. Scene: seaside bench, headphones held in hands, kind reserved smile with respectful physical space, blue afternoon. Exactly one adult woman matching reference; first person player viewpoint, no visible protagonist face or body. Emotional staging and distance must be unmistakable. No words, letters, caption, watermark, panels, collage. Complete background.",
+      "hint": "Generated images are saved to C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0 as C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-0b7fc7dd-f135-4535-afea-87dd84c2ccf6.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-0b7fc7dd-f135-4535-afea-87dd84c2ccf6.png",
+      "original": "docs/ending-originals/isol-normal.png",
+      "asset": "assets/endings/isol-normal.webp"
+    },
+    {
+      "id": "isol",
+      "tier": "bad",
+      "prompt": "One standalone landscape 16:9 ending CG for Korean adult romance visual novel. Match identity, face, hair, age, adult proportions, outfit and handcrafted detailed 16-bit pixel art of supplied character reference(s) precisely. Crisp visible square pixels, plum outlines, restrained nostalgic summer palette, scenic opaque background. Scene: turning away carrying headphones toward rooftop stair door, distant quiet farewell, empty foreground space, cool blue evening. Exactly one adult woman matching reference; first person player viewpoint, no visible protagonist face or body. Emotional staging and distance must be unmistakable. No words, letters, caption, watermark, panels, collage. Complete background.",
+      "hint": "Generated images are saved to C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0 as C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-c8ba3597-cf86-45ac-b2dd-65c34ce2586a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-c8ba3597-cf86-45ac-b2dd-65c34ce2586a.png",
+      "original": "docs/ending-originals/isol-bad.png",
+      "asset": "assets/endings/isol-bad.webp"
+    },
+    {
+      "id": "group",
+      "tier": "friendship",
+      "prompt": "One standalone landscape 16:9 ending CG for Korean adult romance visual novel. Match identity, face, hair, age, adult proportions, outfit and handcrafted detailed 16-bit pixel art of supplied character reference(s) precisely. Crisp visible square pixels, plum outlines, restrained nostalgic summer palette, scenic opaque background. Scene: all five referenced adult women laughing together around six-place seaside communal dinner table, one unoccupied foreground place for first-person viewer, warm summer evening, friendly camaraderie not romantic. Exactly five adult women, all distinct referenced designs. Emotional staging and distance must be unmistakable. No words, letters, caption, watermark, panels, collage. Complete background.",
+      "hint": "Generated images are saved to C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0 as C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-4782550f-05b8-4d39-81e7-625b60ea49e1.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source": "C:\\Users\\USER\\.codex\\generated_images\\01a1c341-be3a-75b2-adcc-3a172c6fc9f0\\exec-4782550f-05b8-4d39-81e7-625b60ea49e1.png",
+      "original": "docs/ending-originals/group-friendship.png",
+      "asset": "assets/endings/group-friendship.webp"
+    }
+  ]
+}

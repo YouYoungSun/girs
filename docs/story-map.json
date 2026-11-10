@@ -1,0 +1,2658 @@
+{
+  "note": "원본 사건 목록. 실제 표시 분기는 relationships.js 및 quiet-scenes.js, 메시지는 messages.js 참조. 개인 3·5 상처, 4·6·7 회복. 엔딩은 호감도·미해결 상처·마지막 개인 에피소드 경험으로 결정.",
+  "scenes": [
+    {
+      "id": "day-1",
+      "title": "입주 첫날부터 이럴 줄은",
+      "place": "공용 식탁",
+      "cast": [
+        "harin",
+        "sea",
+        "yujin",
+        "seoyun",
+        "isol"
+      ],
+      "minDay": 1,
+      "choices": [
+        {
+          "label": "푸딩에 손대면 와이파이도 끊기나요?",
+          "effects": {
+            "isol": 3,
+            "yujin": 2
+          },
+          "memory": "wifi"
+        },
+        {
+          "label": "짐은 나중에. 빵부터 주세요.",
+          "effects": {
+            "harin": 3,
+            "sea": 2
+          },
+          "memory": null
+        },
+        {
+          "label": "운영자님도 같이 앉아요.",
+          "effects": {
+            "seoyun": 3,
+            "harin": 1,
+            "sea": 1,
+            "yujin": 1,
+            "isol": 1
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "day-2",
+      "title": "아침부터 탄수화물 공격",
+      "place": "주방",
+      "cast": [
+        "harin",
+        "sea",
+        "isol"
+      ],
+      "minDay": 2,
+      "choices": [
+        {
+          "label": "그렇게 보면 맛이 기억 안 나.",
+          "effects": {
+            "harin": 4,
+            "sea": 1
+          },
+          "memory": "bread_blush"
+        },
+        {
+          "label": "이솔 몫까지 먹어도 돼?",
+          "effects": {
+            "isol": 3,
+            "harin": 2
+          },
+          "memory": null
+        },
+        {
+          "label": "한 번 더 먹어야 알겠는데.",
+          "effects": {
+            "harin": 2,
+            "sea": 2
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "day-3",
+      "title": "냉장고 실명제",
+      "place": "공용 냉장고",
+      "cast": [
+        "yujin",
+        "isol",
+        "seoyun"
+      ],
+      "minDay": 3,
+      "choices": [
+        {
+          "label": "수사는 종결입니다. 피해자부터 보호하죠.",
+          "effects": {
+            "isol": 3,
+            "yujin": 1
+          },
+          "memory": "pudding"
+        },
+        {
+          "label": "서윤 씨도 의외로 허당이네요.",
+          "effects": {
+            "seoyun": 3,
+            "yujin": 2
+          },
+          "memory": null
+        },
+        {
+          "label": "다 같이 하나씩 사 먹어요.",
+          "effects": {
+            "harin": 1,
+            "sea": 1,
+            "yujin": 1,
+            "seoyun": 1,
+            "isol": 1
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "day-4",
+      "title": "단체방 이름은 중요하다",
+      "place": "공용 식탁",
+      "cast": [
+        "harin",
+        "sea",
+        "yujin",
+        "isol"
+      ],
+      "minDay": 4,
+      "choices": [
+        {
+          "label": "회관 사람들 (퇴근 좀 해)",
+          "effects": {
+            "yujin": 3,
+            "sea": 2
+          },
+          "memory": "chat_name"
+        },
+        {
+          "label": "내 빵을 먹고 자라난 사람들",
+          "effects": {
+            "harin": 3,
+            "isol": 1
+          },
+          "memory": null
+        },
+        {
+          "label": "연락은 짧게, 간식은 넉넉히",
+          "effects": {
+            "isol": 3,
+            "sea": 1
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "day-5",
+      "title": "종이 한 장의 파괴력",
+      "place": "기록실",
+      "cast": [
+        "yujin",
+        "sea",
+        "seoyun"
+      ],
+      "minDay": 5,
+      "choices": [
+        {
+          "label": "이 캐릭터 좋죠. 안경 스킨도 있잖아요.",
+          "effects": {
+            "yujin": 4,
+            "sea": 1
+          },
+          "memory": "yujin_nerd"
+        },
+        {
+          "label": "자료는 제가 지켜드리겠습니다.",
+          "effects": {
+            "yujin": 3,
+            "seoyun": 1
+          },
+          "memory": null
+        },
+        {
+          "label": "세아 씨 것도 확인해봐야 공평하죠.",
+          "effects": {
+            "sea": 3,
+            "seoyun": 2
+          },
+          "memory": "sea_fan"
+        }
+      ]
+    },
+    {
+      "id": "day-6",
+      "title": "장보기 팀 짜다가 해가 진다",
+      "place": "회관 현관",
+      "cast": [
+        "harin",
+        "sea",
+        "yujin",
+        "seoyun",
+        "isol"
+      ],
+      "minDay": 6,
+      "choices": [
+        {
+          "label": "카트는 제가 밀게요. 서윤 씨는 구경 담당.",
+          "effects": {
+            "seoyun": 4,
+            "harin": 1
+          },
+          "memory": "shopping_rest"
+        },
+        {
+          "label": "간식 팀을 별도로 모집합니다.",
+          "effects": {
+            "harin": 3,
+            "isol": 3
+          },
+          "memory": "snack_team"
+        },
+        {
+          "label": "유진 씨의 최단 동선을 따라가죠.",
+          "effects": {
+            "yujin": 3,
+            "sea": 2
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "day-7",
+      "title": "당신의 옆자리를 구하시오",
+      "place": "저녁 식탁",
+      "cast": [
+        "harin",
+        "sea",
+        "yujin",
+        "seoyun",
+        "isol"
+      ],
+      "minDay": 7,
+      "choices": [
+        {
+          "label": "아무 자리나 앉으려다 하린이 꺼낸 접시를 받는다.",
+          "effects": {
+            "harin": 4
+          },
+          "memory": "seat_harin"
+        },
+        {
+          "label": "유진 옆에서 무슨 책 읽는지 묻는다.",
+          "effects": {
+            "yujin": 4
+          },
+          "memory": "seat_yujin"
+        },
+        {
+          "label": "이솔 옆에 앉아 이어폰을 하나 내민다.",
+          "effects": {
+            "isol": 4
+          },
+          "memory": "seat_isol"
+        }
+      ]
+    },
+    {
+      "id": "day-8",
+      "title": "일기예보가 틀렸을 때",
+      "place": "빨랫줄 아래",
+      "cast": [
+        "harin",
+        "seoyun",
+        "sea"
+      ],
+      "minDay": 8,
+      "choices": [
+        {
+          "label": "내 수건을 세아와 반씩 쓴다.",
+          "effects": {
+            "sea": 4,
+            "harin": 1
+          },
+          "memory": "towel_sea"
+        },
+        {
+          "label": "서윤의 젖은 어깨를 먼저 닦아준다.",
+          "effects": {
+            "seoyun": 4
+          },
+          "memory": "rain_seoyun"
+        },
+        {
+          "label": "하린이 씌운 수건 아래에서 얼굴을 내민다.",
+          "effects": {
+            "harin": 4
+          },
+          "memory": "towel_harin"
+        }
+      ]
+    },
+    {
+      "id": "day-9",
+      "title": "공포영화의 배신자",
+      "place": "공용 거실",
+      "cast": [
+        "yujin",
+        "isol",
+        "seoyun"
+      ],
+      "minDay": 9,
+      "choices": [
+        {
+          "label": "유진이 잡은 소매를 그대로 둔다.",
+          "effects": {
+            "yujin": 4
+          },
+          "memory": "scary_sleeve"
+        },
+        {
+          "label": "이솔에게 리모컨 대신 손을 내민다.",
+          "effects": {
+            "isol": 4
+          },
+          "memory": "scary_hand"
+        },
+        {
+          "label": "서윤에게 도와달라는 눈빛을 보낸다.",
+          "effects": {
+            "seoyun": 4
+          },
+          "memory": "scary_seoyun"
+        }
+      ]
+    },
+    {
+      "id": "day-10",
+      "title": "잘못 간 개인 메시지",
+      "place": "아침 식탁",
+      "cast": [
+        "harin",
+        "sea",
+        "yujin"
+      ],
+      "minDay": 10,
+      "choices": [
+        {
+          "label": "그 귀여운 애, 내일도 일찍 일어나겠습니다.",
+          "effects": {
+            "harin": 4,
+            "sea": 1
+          },
+          "memory": "breakfast_text"
+        },
+        {
+          "label": "아무것도 못 본 척 접시를 씻는다.",
+          "effects": {
+            "harin": 3,
+            "yujin": 1
+          },
+          "memory": null
+        },
+        {
+          "label": "유진 씨는 이런 실수 안 하죠?",
+          "effects": {
+            "yujin": 3,
+            "sea": 2
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "day-11",
+      "title": "선풍기 앞의 중대 회의",
+      "place": "거실",
+      "cast": [
+        "sea",
+        "isol",
+        "seoyun"
+      ],
+      "minDay": 11,
+      "choices": [
+        {
+          "label": "이솔 쪽으로 선풍기를 조금 돌린다.",
+          "effects": {
+            "isol": 4,
+            "sea": 1
+          },
+          "memory": "fan"
+        },
+        {
+          "label": "전화 중인 서윤에게 아이스크림을 까준다.",
+          "effects": {
+            "seoyun": 4
+          },
+          "memory": "icecream_seoyun"
+        },
+        {
+          "label": "세아에게 숨기는 게 뭐냐고 되묻는다.",
+          "effects": {
+            "sea": 4
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "day-12",
+      "title": "옷가게에서는 신중하게",
+      "place": "축제 의상 대여점",
+      "cast": [
+        "harin",
+        "sea",
+        "yujin",
+        "seoyun",
+        "isol"
+      ],
+      "minDay": 12,
+      "choices": [
+        {
+          "label": "다 잘 어울리는데, 평소랑 달라서 좀 떨리네요.",
+          "effects": {
+            "harin": 2,
+            "sea": 2,
+            "yujin": 2,
+            "seoyun": 2,
+            "isol": 2
+          },
+          "memory": "outfits"
+        },
+        {
+          "label": "서윤 씨 옷, 다음에도 입어주면 좋겠어요.",
+          "effects": {
+            "seoyun": 4,
+            "sea": 1
+          },
+          "memory": "dress"
+        },
+        {
+          "label": "이솔 소매를 한 번 더 접어준다.",
+          "effects": {
+            "isol": 4,
+            "harin": 1
+          },
+          "memory": "sleeve"
+        }
+      ]
+    },
+    {
+      "id": "day-13",
+      "title": "봉투의 주소는 익명",
+      "place": "거실 쪽지함",
+      "cast": [
+        "harin",
+        "sea",
+        "yujin",
+        "seoyun",
+        "isol"
+      ],
+      "minDay": 13,
+      "choices": [
+        {
+          "label": "쪽지는 안 읽어주고 지갑에 넣는다.",
+          "effects": {
+            "harin": 2,
+            "sea": 2,
+            "yujin": 2,
+            "seoyun": 2,
+            "isol": 2
+          },
+          "memory": "letters_kept"
+        },
+        {
+          "label": "‘덜 귀찮다’는 최고의 칭찬이네요.",
+          "effects": {
+            "isol": 4,
+            "sea": 1
+          },
+          "memory": "less_annoying"
+        },
+        {
+          "label": "나도 다섯 명에게 한 장씩 쓴다.",
+          "effects": {
+            "harin": 1,
+            "sea": 1,
+            "yujin": 1,
+            "seoyun": 1,
+            "isol": 1
+          },
+          "memory": "letters_sent"
+        }
+      ]
+    },
+    {
+      "id": "day-14",
+      "title": "드디어 바다",
+      "place": "해변",
+      "cast": [
+        "harin",
+        "sea",
+        "yujin",
+        "seoyun",
+        "isol"
+      ],
+      "minDay": 14,
+      "choices": [
+        {
+          "label": "하린과 이솔의 물싸움에 합류한다.",
+          "effects": {
+            "harin": 3,
+            "isol": 3
+          },
+          "memory": "beach_play"
+        },
+        {
+          "label": "파라솔 아래 유진과 자리를 지킨다.",
+          "effects": {
+            "yujin": 4
+          },
+          "memory": "beach_photo"
+        },
+        {
+          "label": "서윤과 세아에게 짐 좀 내려놓자고 한다.",
+          "effects": {
+            "seoyun": 3,
+            "sea": 3
+          },
+          "memory": "beach_rest"
+        }
+      ]
+    },
+    {
+      "id": "day-15",
+      "title": "어제보다 조금 조용한 식탁",
+      "place": "점심 식탁",
+      "cast": [
+        "harin",
+        "sea",
+        "yujin",
+        "seoyun",
+        "isol"
+      ],
+      "minDay": 15,
+      "choices": [
+        {
+          "label": "내 사진만 모은 앨범 있어요?",
+          "effects": {
+            "yujin": 4,
+            "sea": 1
+          },
+          "memory": "album"
+        },
+        {
+          "label": "하린에게 근육통에 좋은 빵은 없냐고 묻는다.",
+          "effects": {
+            "harin": 3,
+            "isol": 2
+          },
+          "memory": null
+        },
+        {
+          "label": "서윤의 어깨에 파스를 붙여준다.",
+          "effects": {
+            "seoyun": 4
+          },
+          "memory": "patch"
+        }
+      ]
+    },
+    {
+      "id": "day-16",
+      "title": "매운맛 합동 작전",
+      "place": "주방",
+      "cast": [
+        "sea",
+        "harin",
+        "isol"
+      ],
+      "minDay": 16,
+      "choices": [
+        {
+          "label": "내 그릇과 바꿔줄까? 난 덜 매운 거 받았는데.",
+          "effects": {
+            "sea": 4,
+            "harin": 1
+          },
+          "memory": "spicy"
+        },
+        {
+          "label": "하린과 달걀을 더 넣어 구조한다.",
+          "effects": {
+            "harin": 4,
+            "sea": 1
+          },
+          "memory": "shared_spoon"
+        },
+        {
+          "label": "이솔에게 카메라 대신 물을 건넨다.",
+          "effects": {
+            "isol": 4
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "day-17",
+      "title": "비 오는 날의 보드게임",
+      "place": "공용 거실",
+      "cast": [
+        "yujin",
+        "isol",
+        "seoyun",
+        "sea"
+      ],
+      "minDay": 17,
+      "choices": [
+        {
+          "label": "유진의 설명을 한 번 더 듣는다.",
+          "effects": {
+            "yujin": 4
+          },
+          "memory": "board_yujin"
+        },
+        {
+          "label": "이솔에게 다음 판 개인 지도를 신청한다.",
+          "effects": {
+            "isol": 4
+          },
+          "memory": "board_isol"
+        },
+        {
+          "label": "서윤과 세아를 설득해 공동 꼴찌 동맹을 만든다.",
+          "effects": {
+            "seoyun": 3,
+            "sea": 2
+          },
+          "memory": "losers"
+        }
+      ]
+    },
+    {
+      "id": "day-18",
+      "title": "둘씩 걷는 야시장",
+      "place": "여름 야시장",
+      "cast": [
+        "harin",
+        "sea",
+        "yujin",
+        "seoyun",
+        "isol"
+      ],
+      "minDay": 18,
+      "choices": [
+        {
+          "label": "세아의 손을 살짝 잡고 사람들 사이로 걷는다.",
+          "effects": {
+            "sea": 5
+          },
+          "memory": "market_hand"
+        },
+        {
+          "label": "유진과 서윤의 구경 속도를 따른다.",
+          "effects": {
+            "yujin": 3,
+            "seoyun": 3
+          },
+          "memory": "market_gifts"
+        },
+        {
+          "label": "하린과 이솔을 따라 사격 부스로 간다.",
+          "effects": {
+            "harin": 3,
+            "isol": 3
+          },
+          "memory": "market_game"
+        }
+      ]
+    },
+    {
+      "id": "day-19",
+      "title": "정전의 책임자",
+      "place": "어두운 복도",
+      "cast": [
+        "sea",
+        "yujin",
+        "isol",
+        "seoyun"
+      ],
+      "minDay": 19,
+      "choices": [
+        {
+          "label": "이솔 쪽으로 손전등을 돌리고 함께 걷는다.",
+          "effects": {
+            "isol": 5
+          },
+          "memory": "blackout_isol"
+        },
+        {
+          "label": "세아와 유진에게 팔 하나씩 빌려준다.",
+          "effects": {
+            "sea": 3,
+            "yujin": 3
+          },
+          "memory": "blackout_pair"
+        },
+        {
+          "label": "서윤에게 가서 손전등을 비춰준다.",
+          "effects": {
+            "seoyun": 5
+          },
+          "memory": "blackout_seoyun"
+        }
+      ]
+    },
+    {
+      "id": "day-20",
+      "title": "어젯밤 기억은 삭제 불가",
+      "place": "아침 식탁",
+      "cast": [
+        "harin",
+        "sea",
+        "yujin",
+        "seoyun",
+        "isol"
+      ],
+      "minDay": 20,
+      "choices": [
+        {
+          "label": "어제는 다들 조금 귀여웠어요.",
+          "effects": {
+            "harin": 2,
+            "sea": 2,
+            "yujin": 2,
+            "seoyun": 2,
+            "isol": 2
+          },
+          "memory": "cute_everyone"
+        },
+        {
+          "label": "하린의 반죽 구조 공로를 크게 칭찬한다.",
+          "effects": {
+            "harin": 4
+          },
+          "memory": "bread_rescue"
+        },
+        {
+          "label": "아무 말 없이 모두의 커피를 채워준다.",
+          "effects": {
+            "yujin": 2,
+            "isol": 2,
+            "seoyun": 2
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "day-21",
+      "title": "이유 없이 기다리는 저녁",
+      "place": "현관 앞",
+      "cast": [
+        "harin",
+        "sea",
+        "isol"
+      ],
+      "minDay": 21,
+      "choices": [
+        {
+          "label": "늦어서 미안. 다음엔 먼저 연락할게.",
+          "effects": {
+            "harin": 3,
+            "sea": 3,
+            "isol": 3
+          },
+          "memory": "waiting"
+        },
+        {
+          "label": "세아에게 전파가 얼마나 좋은지 보여달라고 한다.",
+          "effects": {
+            "sea": 5
+          },
+          "memory": "signal"
+        },
+        {
+          "label": "하린에게 저녁을 같이 먹자고 한다.",
+          "effects": {
+            "harin": 5
+          },
+          "memory": "dinner_wait"
+        }
+      ]
+    },
+    {
+      "id": "day-22",
+      "title": "아는 취향이 늘었다",
+      "place": "거실 선물 교환",
+      "cast": [
+        "harin",
+        "sea",
+        "yujin",
+        "seoyun",
+        "isol"
+      ],
+      "minDay": 22,
+      "choices": [
+        {
+          "label": "‘아까워하지 말고 써. 또 골라줄게.’",
+          "effects": {
+            "seoyun": 4,
+            "harin": 2
+          },
+          "memory": "again"
+        },
+        {
+          "label": "‘같이 고르러 가면 더 재밌었겠다.’",
+          "effects": {
+            "sea": 3,
+            "yujin": 3
+          },
+          "memory": "gift_date"
+        },
+        {
+          "label": "‘마음에 안 들면 바꿔줄게. 솔직하게 말해.’",
+          "effects": {
+            "isol": 4,
+            "harin": 1
+          },
+          "memory": "gift_keep"
+        }
+      ]
+    },
+    {
+      "id": "day-23",
+      "title": "남의 연애 취향을 묻는 법",
+      "place": "늦은 밤 식탁",
+      "cast": [
+        "sea",
+        "yujin",
+        "harin",
+        "seoyun",
+        "isol"
+      ],
+      "minDay": 23,
+      "choices": [
+        {
+          "label": "나는 말해주면 좋겠어. 놓치기 싫으니까.",
+          "effects": {
+            "sea": 2,
+            "yujin": 2,
+            "seoyun": 2
+          },
+          "memory": "tell_me"
+        },
+        {
+          "label": "눈치는 없어도 좋아하는 사람은 신경 쓰이던데.",
+          "effects": {
+            "harin": 1,
+            "sea": 1,
+            "yujin": 1,
+            "seoyun": 1,
+            "isol": 1
+          },
+          "memory": "notice"
+        },
+        {
+          "label": "혹시 이거 나 빼고 아는 사람이 있는 이야기야?",
+          "effects": {
+            "isol": 3,
+            "harin": 2
+          },
+          "memory": "oblivious"
+        }
+      ]
+    },
+    {
+      "id": "day-24",
+      "title": "사진 찍는 날의 소동",
+      "place": "회관 계단",
+      "cast": [
+        "harin",
+        "sea",
+        "yujin",
+        "seoyun",
+        "isol"
+      ],
+      "minDay": 24,
+      "choices": [
+        {
+          "label": "실수한 사진도 다 남겨두자.",
+          "effects": {
+            "harin": 2,
+            "sea": 2,
+            "yujin": 2,
+            "seoyun": 2,
+            "isol": 2
+          },
+          "memory": "photos"
+        },
+        {
+          "label": "서윤 옆에 서서 이번엔 제대로 찍는다.",
+          "effects": {
+            "seoyun": 4
+          },
+          "memory": "photo_seoyun"
+        },
+        {
+          "label": "이솔의 브이에 같이 브이로 답한다.",
+          "effects": {
+            "isol": 4
+          },
+          "memory": "photo_isol"
+        }
+      ]
+    },
+    {
+      "id": "day-25",
+      "title": "축제 전날은 다 같이 밤샘",
+      "place": "장터 준비실",
+      "cast": [
+        "harin",
+        "sea",
+        "yujin",
+        "seoyun",
+        "isol"
+      ],
+      "minDay": 25,
+      "choices": [
+        {
+          "label": "끝나도 같이 밥 먹자. 단체방은 남겨두고.",
+          "effects": {
+            "harin": 2,
+            "sea": 2,
+            "yujin": 2,
+            "seoyun": 2,
+            "isol": 2
+          },
+          "memory": "group_future"
+        },
+        {
+          "label": "각자 새로 시작한 날, 제일 먼저 축하해주자.",
+          "effects": {
+            "harin": 1,
+            "sea": 1,
+            "yujin": 1,
+            "seoyun": 1,
+            "isol": 1
+          },
+          "memory": "first_cheer"
+        },
+        {
+          "label": "우선 졸린 사람부터 10분씩 쉬자.",
+          "effects": {
+            "seoyun": 3,
+            "harin": 2,
+            "yujin": 2
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "day-26",
+      "title": "단체 데이트라는 이상한 말",
+      "place": "축제 거리",
+      "cast": [
+        "harin",
+        "sea",
+        "yujin",
+        "seoyun",
+        "isol"
+      ],
+      "minDay": 26,
+      "choices": [
+        {
+          "label": "모두에게 작은 꽃을 하나씩 골라준다.",
+          "effects": {
+            "harin": 2,
+            "sea": 2,
+            "yujin": 2,
+            "seoyun": 2,
+            "isol": 2
+          },
+          "memory": "flowers"
+        },
+        {
+          "label": "유진에게 외출인지 데이트인지 다시 묻는다.",
+          "effects": {
+            "yujin": 5
+          },
+          "memory": "festival_yujin"
+        },
+        {
+          "label": "서윤에게 오늘은 누구도 챙기지 말자고 한다.",
+          "effects": {
+            "seoyun": 5
+          },
+          "memory": "festival_seoyun"
+        }
+      ]
+    },
+    {
+      "id": "day-27",
+      "title": "분실물 센터에는 두근거림도 있나요",
+      "place": "축제 분수대",
+      "cast": [
+        "harin",
+        "sea",
+        "isol"
+      ],
+      "minDay": 27,
+      "choices": [
+        {
+          "label": "분수대의 세아에게 간다.",
+          "effects": {
+            "sea": 5
+          },
+          "memory": "lost_sea"
+        },
+        {
+          "label": "하린이 보낸 사진 속 골목을 찾는다.",
+          "effects": {
+            "harin": 5
+          },
+          "memory": "lost_harin"
+        },
+        {
+          "label": "이솔에게 전화한다.",
+          "effects": {
+            "isol": 5
+          },
+          "memory": "lost_isol"
+        }
+      ]
+    },
+    {
+      "id": "day-28",
+      "title": "고백 전야제는 없습니다",
+      "place": "회관 거실",
+      "cast": [
+        "harin",
+        "sea",
+        "yujin",
+        "seoyun",
+        "isol"
+      ],
+      "minDay": 28,
+      "choices": [
+        {
+          "label": "가까운 곳이면, 이 식탁 정도인가?",
+          "effects": {
+            "harin": 2,
+            "sea": 2,
+            "yujin": 2,
+            "seoyun": 2,
+            "isol": 2
+          },
+          "memory": "table_romance"
+        },
+        {
+          "label": "서윤 씨는 이런 거 믿어요?",
+          "effects": {
+            "seoyun": 5
+          },
+          "memory": "fortune"
+        },
+        {
+          "label": "이솔 결과만 한 번 더 돌려본다.",
+          "effects": {
+            "isol": 5
+          },
+          "memory": "fortune_isol"
+        }
+      ]
+    },
+    {
+      "id": "day-29",
+      "title": "내일을 핑계로 못 하는 말",
+      "place": "회관 포장 작업실",
+      "cast": [
+        "harin",
+        "sea",
+        "yujin",
+        "seoyun",
+        "isol"
+      ],
+      "minDay": 29,
+      "choices": [
+        {
+          "label": "오늘은 다섯 명 모두에게 고맙다고 말한다.",
+          "effects": {
+            "harin": 2,
+            "sea": 2,
+            "yujin": 2,
+            "seoyun": 2,
+            "isol": 2
+          },
+          "memory": "thanks_all"
+        },
+        {
+          "label": "내일 끝나고, 잠깐 시간 비워둘래요?",
+          "effects": {
+            "harin": 1,
+            "sea": 1,
+            "yujin": 1,
+            "seoyun": 1,
+            "isol": 1
+          },
+          "memory": "tomorrow"
+        },
+        {
+          "label": "단체 사진 한 장 더 찍자고 한다.",
+          "effects": {
+            "harin": 1,
+            "sea": 1,
+            "yujin": 1,
+            "seoyun": 1,
+            "isol": 1
+          },
+          "memory": "last_photo"
+        }
+      ]
+    },
+    {
+      "id": "day-30",
+      "title": "마지막 장터, 그다음 약속",
+      "place": "달무리회관",
+      "cast": [
+        "harin",
+        "sea",
+        "yujin",
+        "seoyun",
+        "isol"
+      ],
+      "minDay": 30,
+      "choices": [
+        {
+          "label": "책을 덮고, 오늘 전하고 싶은 말을 정한다.",
+          "effects": {},
+          "memory": "final_ready"
+        },
+        {
+          "label": "모두와 인사한 뒤 잠시 혼자 걷는다.",
+          "effects": {},
+          "memory": null
+        },
+        {
+          "label": "서두르지 않고 식탁을 한 번 더 정리한다.",
+          "effects": {},
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "harin-1",
+      "title": "시식단 1호의 특권",
+      "place": "주방",
+      "cast": [
+        "harin"
+      ],
+      "minDay": 1,
+      "choices": [
+        {
+          "label": "좋아하는 것도 표정에 다 나겠네.",
+          "effects": {
+            "harin": 6
+          },
+          "memory": "harin_taste"
+        },
+        {
+          "label": "마지막 한 입은 네가 먹어.",
+          "effects": {
+            "harin": 4
+          },
+          "memory": "harin_share"
+        },
+        {
+          "label": "이러다 저녁도 여기서 먹겠는데.",
+          "effects": {
+            "harin": 3
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "harin-2",
+      "title": "앞치마의 뒤쪽",
+      "place": "주방",
+      "cast": [
+        "harin"
+      ],
+      "minDay": 3,
+      "choices": [
+        {
+          "label": "다 묶고도 잠깐 머물렀다가 한 걸음 물러난다.",
+          "effects": {
+            "harin": 6
+          },
+          "memory": "harin_apron"
+        },
+        {
+          "label": "리본 모양으로 묶어준다.",
+          "effects": {
+            "harin": 4
+          },
+          "memory": null
+        },
+        {
+          "label": "묶어주고 빵 하나를 수고비로 받는다.",
+          "effects": {
+            "harin": 3
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "harin-3",
+      "title": "동네 빵집의 라이벌",
+      "place": "골목 빵집",
+      "cast": [
+        "harin"
+      ],
+      "minDay": 6,
+      "choices": [
+        {
+          "label": "크림 묻었다고 말하고 냅킨을 건넨다.",
+          "effects": {
+            "harin": 6
+          },
+          "memory": "harin_cream"
+        },
+        {
+          "label": "내 입에도 크림을 묻히고 마주 웃는다.",
+          "effects": {
+            "harin": 4,
+            "sea": 1
+          },
+          "memory": null
+        },
+        {
+          "label": "라이벌의 맛을 진지하게 평가한다.",
+          "effects": {
+            "harin": 3
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "harin-4",
+      "title": "내일 아침도 예약할게",
+      "place": "주방",
+      "cast": [
+        "harin"
+      ],
+      "minDay": 10,
+      "choices": [
+        {
+          "label": "내 이름을 이렇게 예쁘게 불러주는 사람은 처음이네.",
+          "effects": {
+            "harin": 6
+          },
+          "memory": "harin_namebread"
+        },
+        {
+          "label": "하린 이름도 만들어서 같이 먹자.",
+          "effects": {
+            "harin": 5
+          },
+          "memory": null
+        },
+        {
+          "label": "사진부터 찍고 단체방에는 안 올린다.",
+          "effects": {
+            "harin": 4
+          },
+          "memory": "harin_private"
+        }
+      ]
+    },
+    {
+      "id": "harin-5",
+      "title": "쉬는 날에는 손님이 아니다",
+      "place": "해변 산책로",
+      "cast": [
+        "harin"
+      ],
+      "minDay": 14,
+      "choices": [
+        {
+          "label": "그럼 오늘은 하린 얘기만 할까.",
+          "effects": {
+            "harin": 6
+          },
+          "memory": "harin_walk"
+        },
+        {
+          "label": "목적지 없이 한 바퀴 더 걷자.",
+          "effects": {
+            "harin": 5
+          },
+          "memory": null
+        },
+        {
+          "label": "모래 위에 작은 새를 그려준다.",
+          "effects": {
+            "harin": 4
+          },
+          "memory": "harin_birds"
+        }
+      ]
+    },
+    {
+      "id": "harin-6",
+      "title": "지원서와 야식 사이",
+      "place": "작업대",
+      "cast": [
+        "harin"
+      ],
+      "minDay": 20,
+      "choices": [
+        {
+          "label": "서울에 가면 내가 야식 사줄 차례네.",
+          "effects": {
+            "harin": 6
+          },
+          "memory": "harin_seoul"
+        },
+        {
+          "label": "네가 듣고 싶은 수업 얘기를 해줘.",
+          "effects": {
+            "harin": 4
+          },
+          "memory": null
+        },
+        {
+          "label": "야식을 나눠 먹으며 제출을 기다린다.",
+          "effects": {
+            "harin": 4
+          },
+          "memory": "harin_submit"
+        }
+      ]
+    },
+    {
+      "id": "harin-7",
+      "title": "판매하지 않는 빵",
+      "place": "닫힌 주방",
+      "cast": [
+        "harin"
+      ],
+      "minDay": 25,
+      "choices": [
+        {
+          "label": "나한테는 꽤 좋은 말인데.",
+          "effects": {
+            "harin": 6
+          },
+          "memory": "harin_only"
+        },
+        {
+          "label": "그럼 이건 둘이 먹자.",
+          "effects": {
+            "harin": 5
+          },
+          "memory": null
+        },
+        {
+          "label": "이 메뉴 이름은 뭐야?",
+          "effects": {
+            "harin": 4
+          },
+          "memory": "harin_menu"
+        }
+      ]
+    },
+    {
+      "id": "sea-1",
+      "title": "첫 잔은 질문 하나",
+      "place": "낮은달",
+      "cast": [
+        "sea"
+      ],
+      "minDay": 1,
+      "choices": [
+        {
+          "label": "세아 씨가 예뻐서 그렇다고 하면 봐줘요?",
+          "effects": {
+            "sea": 6
+          },
+          "memory": "sea_straight"
+        },
+        {
+          "label": "들켰으니까 이제 긴장할게요.",
+          "effects": {
+            "sea": 4
+          },
+          "memory": null
+        },
+        {
+          "label": "바텐더의 관찰력이 무섭네요.",
+          "effects": {
+            "sea": 3
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "sea-2",
+      "title": "능숙한 사람의 약점",
+      "place": "낮은달 준비실",
+      "cast": [
+        "sea"
+      ],
+      "minDay": 3,
+      "choices": [
+        {
+          "label": "직접 재볼래요? 손을 나란히 댄다.",
+          "effects": {
+            "sea": 6
+          },
+          "memory": "sea_hands"
+        },
+        {
+          "label": "수고비는 다음 휴무일의 산책으로 받을게요.",
+          "effects": {
+            "sea": 5
+          },
+          "memory": "sea_walk"
+        },
+        {
+          "label": "다음부터는 나를 불러요.",
+          "effects": {
+            "sea": 4
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "sea-3",
+      "title": "휴무일의 무방비",
+      "place": "편의점 앞",
+      "cast": [
+        "sea"
+      ],
+      "minDay": 6,
+      "choices": [
+        {
+          "label": "오늘 모습도 좋은데. 내 옆자리에 앉아요.",
+          "effects": {
+            "sea": 6
+          },
+          "memory": "sea_offday2"
+        },
+        {
+          "label": "재미있는 말은 내가 담당할게요.",
+          "effects": {
+            "sea": 4
+          },
+          "memory": null
+        },
+        {
+          "label": "같이 조용히 라면을 먹는다.",
+          "effects": {
+            "sea": 4
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "sea-4",
+      "title": "질투는 메뉴에 없는데",
+      "place": "바 카운터",
+      "cast": [
+        "sea"
+      ],
+      "minDay": 10,
+      "choices": [
+        {
+          "label": "내 번호 궁금하면 직접 물어봐요.",
+          "effects": {
+            "sea": 6
+          },
+          "memory": "sea_jealous"
+        },
+        {
+          "label": "왜, 신경 쓰여요?",
+          "effects": {
+            "sea": 5
+          },
+          "memory": null
+        },
+        {
+          "label": "오늘 마지막 주문은 세아 씨랑 같이 마실래요.",
+          "effects": {
+            "sea": 4
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "sea-5",
+      "title": "길을 잃는 핑계",
+      "place": "여운 골목",
+      "cast": [
+        "sea"
+      ],
+      "minDay": 14,
+      "choices": [
+        {
+          "label": "나란히 앉고 사진 나오는 동안도 기다린다.",
+          "effects": {
+            "sea": 6
+          },
+          "memory": "sea_photo2"
+        },
+        {
+          "label": "포즈는 세아 씨가 골라줘요.",
+          "effects": {
+            "sea": 4
+          },
+          "memory": null
+        },
+        {
+          "label": "허브보다 점심부터 먹자고 한다.",
+          "effects": {
+            "sea": 3
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "sea-6",
+      "title": "서울이라는 다음 장소",
+      "place": "낮은달",
+      "cast": [
+        "sea"
+      ],
+      "minDay": 20,
+      "choices": [
+        {
+          "label": "사람은 택배가 안 돼요. 대신 같이 갈 수는 있고.",
+          "effects": {
+            "sea": 6
+          },
+          "memory": "sea_seoul"
+        },
+        {
+          "label": "새 바의 첫 손님 예약할게요.",
+          "effects": {
+            "sea": 5
+          },
+          "memory": null
+        },
+        {
+          "label": "어떤 가게인지 먼저 들려줘요.",
+          "effects": {
+            "sea": 4
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "sea-7",
+      "title": "장난을 뺀 한 잔",
+      "place": "영업 끝난 바",
+      "cast": [
+        "sea"
+      ],
+      "minDay": 25,
+      "choices": [
+        {
+          "label": "그럼 오늘은 같이 있어도 돼요?",
+          "effects": {
+            "sea": 6
+          },
+          "memory": "sea_stay"
+        },
+        {
+          "label": "지금 하는 말은 농담 아니죠?",
+          "effects": {
+            "sea": 5
+          },
+          "memory": "sea_truth"
+        },
+        {
+          "label": "다 마신 뒤 잔을 같이 씻는다.",
+          "effects": {
+            "sea": 4
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "yujin-1",
+      "title": "도서관의 비밀 페이지",
+      "place": "기록실",
+      "cast": [
+        "yujin"
+      ],
+      "minDay": 1,
+      "choices": [
+        {
+          "label": "내 계정도 보여주고 친구 추가한다.",
+          "effects": {
+            "yujin": 6
+          },
+          "memory": "yujin_friend"
+        },
+        {
+          "label": "나중에 추천 캐릭터 알려줘요.",
+          "effects": {
+            "yujin": 4
+          },
+          "memory": null
+        },
+        {
+          "label": "아무에게도 안 말할게요.",
+          "effects": {
+            "yujin": 3
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "yujin-2",
+      "title": "안경을 벗으면",
+      "place": "기록실",
+      "cast": [
+        "yujin"
+      ],
+      "minDay": 3,
+      "choices": [
+        {
+          "label": "잘 보일 때까지 기다릴게요. 도망 안 가고.",
+          "effects": {
+            "yujin": 6
+          },
+          "memory": "yujin_glasses"
+        },
+        {
+          "label": "안경을 받아 렌즈를 맞춰준다.",
+          "effects": {
+            "yujin": 5
+          },
+          "memory": null
+        },
+        {
+          "label": "부품을 같이 찾는다.",
+          "effects": {
+            "yujin": 3
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "yujin-3",
+      "title": "운명은 천장까지 돌리면 안 된다",
+      "place": "도서관 마당",
+      "cast": [
+        "yujin"
+      ],
+      "minDay": 6,
+      "choices": [
+        {
+          "label": "손 아직 잡고 있어도 돼요?",
+          "effects": {
+            "yujin": 6
+          },
+          "memory": "yujin_luck"
+        },
+        {
+          "label": "이거 뽑았으니 간식 사줘요.",
+          "effects": {
+            "yujin": 4
+          },
+          "memory": null
+        },
+        {
+          "label": "다음에는 유진 씨가 내 걸 눌러줘요.",
+          "effects": {
+            "yujin": 3
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "yujin-4",
+      "title": "설명할 수 없는 장면",
+      "place": "야외 영화관",
+      "cast": [
+        "yujin"
+      ],
+      "minDay": 10,
+      "choices": [
+        {
+          "label": "좋아하면 마지막에는 말하는 게 좋겠네요.",
+          "effects": {
+            "yujin": 6
+          },
+          "memory": "yujin_movie2"
+        },
+        {
+          "label": "다음 영화도 같이 보고 얘기해요.",
+          "effects": {
+            "yujin": 5
+          },
+          "memory": null
+        },
+        {
+          "label": "해석이 달라도 같이 볼 수 있잖아요.",
+          "effects": {
+            "yujin": 4
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "yujin-5",
+      "title": "책상 밑의 사건",
+      "place": "기록실",
+      "cast": [
+        "yujin"
+      ],
+      "minDay": 14,
+      "choices": [
+        {
+          "label": "작게 웃고, 유진이 놓을 때까지 기다린다.",
+          "effects": {
+            "yujin": 6
+          },
+          "memory": "yujin_underdesk"
+        },
+        {
+          "label": "둘 다 여기 있다고 당당히 말한다.",
+          "effects": {
+            "yujin": 3,
+            "sea": 1
+          },
+          "memory": null
+        },
+        {
+          "label": "먼저 빠져나와 유진에게 손을 내민다.",
+          "effects": {
+            "yujin": 5
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "yujin-6",
+      "title": "이름 없는 책갈피",
+      "place": "문구점",
+      "cast": [
+        "yujin"
+      ],
+      "minDay": 20,
+      "choices": [
+        {
+          "label": "두 사람 이름을 나란히 쓴다.",
+          "effects": {
+            "yujin": 6
+          },
+          "memory": "yujin_card"
+        },
+        {
+          "label": "다음에는 같이 보낼 사람을 정해요.",
+          "effects": {
+            "yujin": 5
+          },
+          "memory": null
+        },
+        {
+          "label": "내 지갑 안쪽에 조심히 넣는다.",
+          "effects": {
+            "yujin": 4
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "yujin-7",
+      "title": "게임 속 대사보다",
+      "place": "기록실 밤",
+      "cast": [
+        "yujin"
+      ],
+      "minDay": 25,
+      "choices": [
+        {
+          "label": "나는 지금 듣고 싶었는데.",
+          "effects": {
+            "yujin": 6
+          },
+          "memory": "yujin_words"
+        },
+        {
+          "label": "다음 계절 얘기는 마지막 날 다시 해요.",
+          "effects": {
+            "yujin": 5
+          },
+          "memory": null
+        },
+        {
+          "label": "조용히 기다리며 차를 한 모금 마신다.",
+          "effects": {
+            "yujin": 4
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "seoyun-1",
+      "title": "의외의 허당",
+      "place": "사무실",
+      "cast": [
+        "seoyun"
+      ],
+      "minDay": 1,
+      "choices": [
+        {
+          "label": "비밀 유지비로 같이 커피 한 잔 어때요?",
+          "effects": {
+            "seoyun": 6
+          },
+          "memory": "seoyun_secret"
+        },
+        {
+          "label": "다음에 잃어버리면 내가 찾아줄게요.",
+          "effects": {
+            "seoyun": 5
+          },
+          "memory": null
+        },
+        {
+          "label": "못 본 척 사무실 일을 조금 돕는다.",
+          "effects": {
+            "seoyun": 3
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "seoyun-2",
+      "title": "누나라고 부르면",
+      "place": "회관 뒤뜰",
+      "cast": [
+        "seoyun"
+      ],
+      "minDay": 3,
+      "choices": [
+        {
+          "label": "서윤이라고 불러도 돼요?",
+          "effects": {
+            "seoyun": 6
+          },
+          "memory": "seoyun_firstname"
+        },
+        {
+          "label": "누나가 좋아하면 그렇게 부를게요.",
+          "effects": {
+            "seoyun": 5
+          },
+          "memory": null
+        },
+        {
+          "label": "나사부터 잘 듣게 해봅시다.",
+          "effects": {
+            "seoyun": 3
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "seoyun-3",
+      "title": "다 큰 사람도 삐칩니다",
+      "place": "공용 거실",
+      "cast": [
+        "seoyun"
+      ],
+      "minDay": 6,
+      "choices": [
+        {
+          "label": "변명하지 않고 사과하고, 다음 약속 시간을 묻는다.",
+          "effects": {
+            "seoyun": 6
+          },
+          "memory": "seoyun_time"
+        },
+        {
+          "label": "미안해요. 차는 내가 준비할게요.",
+          "effects": {
+            "seoyun": 3
+          },
+          "memory": null
+        },
+        {
+          "label": "누나니까 이 정도는 이해해줄 줄 알았어요.",
+          "effects": {
+            "seoyun": -3
+          },
+          "memory": "seoyun_hurt"
+        }
+      ]
+    },
+    {
+      "id": "seoyun-4",
+      "title": "우산 가운데의 자리",
+      "place": "비 오는 골목",
+      "cast": [
+        "seoyun"
+      ],
+      "minDay": 10,
+      "choices": [
+        {
+          "label": "어깨가 닿을 만큼 더 가까이 걷는다.",
+          "effects": {
+            "seoyun": 6
+          },
+          "memory": "seoyun_umbrella"
+        },
+        {
+          "label": "가까운 찻집에서 비를 기다린다.",
+          "effects": {
+            "seoyun": 4
+          },
+          "memory": null
+        },
+        {
+          "label": "다음에는 큰 우산 하나를 같이 사요.",
+          "effects": {
+            "seoyun": 5
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "seoyun-5",
+      "title": "일 없는 사람 두 명",
+      "place": "가구 공방",
+      "cast": [
+        "seoyun"
+      ],
+      "minDay": 14,
+      "choices": [
+        {
+          "label": "한 시간만 더 같이 놀아요.",
+          "effects": {
+            "seoyun": 6
+          },
+          "memory": "seoyun_play"
+        },
+        {
+          "label": "처음 만들 의자에 내가 앉아봐도 돼요?",
+          "effects": {
+            "seoyun": 5
+          },
+          "memory": null
+        },
+        {
+          "label": "단체방에 휴가 연장 신청을 대신 올린다.",
+          "effects": {
+            "seoyun": 4,
+            "sea": 1
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "seoyun-6",
+      "title": "어른도 게임에 진심이다",
+      "place": "게임센터",
+      "cast": [
+        "seoyun"
+      ],
+      "minDay": 20,
+      "choices": [
+        {
+          "label": "한 판 더요. 이번엔 내가 응원할게요.",
+          "effects": {
+            "seoyun": 6
+          },
+          "memory": "seoyun_arcade"
+        },
+        {
+          "label": "우리 둘이 팀으로 해요.",
+          "effects": {
+            "seoyun": 4
+          },
+          "memory": null
+        },
+        {
+          "label": "방금 모습 좋았다고 말한다.",
+          "effects": {
+            "seoyun": 5
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "seoyun-7",
+      "title": "배표는 두 장",
+      "place": "현관 벤치",
+      "cast": [
+        "seoyun"
+      ],
+      "minDay": 25,
+      "choices": [
+        {
+          "label": "내 이름도 승객란에 적는다.",
+          "effects": {
+            "seoyun": 6
+          },
+          "memory": "seoyun_boat"
+        },
+        {
+          "label": "길 잃어도 같이 가요.",
+          "effects": {
+            "seoyun": 5
+          },
+          "memory": null
+        },
+        {
+          "label": "날씨 나쁘면 근처에서 아침 먹어요.",
+          "effects": {
+            "seoyun": 4
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "isol-1",
+      "title": "소매 안의 손",
+      "place": "옥상",
+      "cast": [
+        "isol"
+      ],
+      "minDay": 1,
+      "choices": [
+        {
+          "label": "소매를 접어주고 손은 놓는다.",
+          "effects": {
+            "isol": 6
+          },
+          "memory": "isol_sleeves"
+        },
+        {
+          "label": "케이블을 같이 감는다.",
+          "effects": {
+            "isol": 4
+          },
+          "memory": null
+        },
+        {
+          "label": "재킷 잘 어울린다고만 말한다.",
+          "effects": {
+            "isol": 3
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "isol-2",
+      "title": "손이 닿는 위치",
+      "place": "장비 선반",
+      "cast": [
+        "isol"
+      ],
+      "minDay": 3,
+      "choices": [
+        {
+          "label": "내려주고 눈높이를 맞춰 물건을 건넨다.",
+          "effects": {
+            "isol": 6
+          },
+          "memory": "isol_shelf"
+        },
+        {
+          "label": "자주 쓰는 건 아래칸에 같이 옮기자.",
+          "effects": {
+            "isol": 4
+          },
+          "memory": null
+        },
+        {
+          "label": "손가락 하나를 수고비처럼 내민다.",
+          "effects": {
+            "isol": 5
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "isol-3",
+      "title": "고장 나지 않은 이어폰",
+      "place": "방파제",
+      "cast": [
+        "isol"
+      ],
+      "minDay": 6,
+      "choices": [
+        {
+          "label": "조금 가까워도 괜찮냐고 묻는다.",
+          "effects": {
+            "isol": 6
+          },
+          "memory": "isol_earphone"
+        },
+        {
+          "label": "곡이 끝날 때까지 같이 바다를 본다.",
+          "effects": {
+            "isol": 4
+          },
+          "memory": null
+        },
+        {
+          "label": "내가 좋아하는 곡도 하나 들려준다.",
+          "effects": {
+            "isol": 5
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "isol-4",
+      "title": "패배를 모르는 두 사람",
+      "place": "게임센터",
+      "cast": [
+        "isol"
+      ],
+      "minDay": 10,
+      "choices": [
+        {
+          "label": "고양이를 이솔 손에 쥐여준다.",
+          "effects": {
+            "isol": 6
+          },
+          "memory": "isol_cat"
+        },
+        {
+          "label": "다음 판은 팀으로 하자.",
+          "effects": {
+            "isol": 4
+          },
+          "memory": null
+        },
+        {
+          "label": "게임 말고 간식으로 승부하자.",
+          "effects": {
+            "isol": 5
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "isol-5",
+      "title": "엄마의 밴드에는 이름이 없다",
+      "place": "송출실",
+      "cast": [
+        "isol"
+      ],
+      "minDay": 14,
+      "choices": [
+        {
+          "label": "테이프보다 지금 이솔의 웃음을 바라본다.",
+          "effects": {
+            "isol": 6
+          },
+          "memory": "isol_smile"
+        },
+        {
+          "label": "옆에서 조용히 끝까지 듣는다.",
+          "effects": {
+            "isol": 4
+          },
+          "memory": null
+        },
+        {
+          "label": "밴드 이름을 우리가 하나 지어주자.",
+          "effects": {
+            "isol": 5
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "isol-6",
+      "title": "대답이 짧아도",
+      "place": "옥상",
+      "cast": [
+        "isol"
+      ],
+      "minDay": 20,
+      "choices": [
+        {
+          "label": "첫 작업 끝나는 날은 비워둘게.",
+          "effects": {
+            "isol": 6
+          },
+          "memory": "isol_firstday"
+        },
+        {
+          "label": "조건부터 같이 읽어보자.",
+          "effects": {
+            "isol": 4
+          },
+          "memory": null
+        },
+        {
+          "label": "멀리 가도 가끔 같이 음악 듣자.",
+          "effects": {
+            "isol": 5
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "isol-7",
+      "title": "녹음하지 않는 목소리",
+      "place": "옥상 저녁",
+      "cast": [
+        "isol"
+      ],
+      "minDay": 25,
+      "choices": [
+        {
+          "label": "지금도 그 목소리로 한 번 불러줘.",
+          "effects": {
+            "isol": 6
+          },
+          "memory": "isol_voice"
+        },
+        {
+          "label": "다른 데 안 쓰고 오래 간직할게.",
+          "effects": {
+            "isol": 4
+          },
+          "memory": null
+        },
+        {
+          "label": "다음에는 같이 소리를 남기자.",
+          "effects": {
+            "isol": 5
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "group-1",
+      "title": "재료 이름이 문제라면",
+      "place": "주방",
+      "cast": [
+        "harin",
+        "sea",
+        "isol"
+      ],
+      "minDay": 2,
+      "choices": [
+        {
+          "label": "첫사랑은 시식해보고 정할게요.",
+          "effects": {
+            "sea": 4,
+            "harin": 2
+          },
+          "memory": "bread_firstlove"
+        },
+        {
+          "label": "이솔 의견에 작은 수식어만 더하자. ‘또 먹고 싶은 빵’.",
+          "effects": {
+            "isol": 4,
+            "harin": 3
+          },
+          "memory": null
+        },
+        {
+          "label": "각자 하나씩 팔아보고 꼴찌가 설거지.",
+          "effects": {
+            "harin": 3,
+            "sea": 3,
+            "isol": 3
+          },
+          "memory": "bread_bet"
+        }
+      ]
+    },
+    {
+      "id": "group-2",
+      "title": "잠깐 자리를 비운 사이",
+      "place": "기록실",
+      "cast": [
+        "yujin",
+        "isol"
+      ],
+      "minDay": 4,
+      "choices": [
+        {
+          "label": "유진이 직접 깰 때까지 이솔이 가르쳐주면 되지.",
+          "effects": {
+            "yujin": 4,
+            "isol": 3
+          },
+          "memory": "game_class"
+        },
+        {
+          "label": "이솔 실력은 인정. 대신 간식은 유진부터.",
+          "effects": {
+            "isol": 4,
+            "yujin": 2
+          },
+          "memory": null
+        },
+        {
+          "label": "내 기록은 낮으니까 내 계정으로 연습해.",
+          "effects": {
+            "isol": 3,
+            "yujin": 3
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "group-3",
+      "title": "우리 운영자님은 휴무입니다",
+      "place": "사무실",
+      "cast": [
+        "seoyun",
+        "sea",
+        "harin"
+      ],
+      "minDay": 6,
+      "choices": [
+        {
+          "label": "오늘 점심은 나랑 천천히 먹어요.",
+          "effects": {
+            "seoyun": 5,
+            "harin": 2,
+            "sea": 2
+          },
+          "memory": "rest_team"
+        },
+        {
+          "label": "세아와 하린에게도 점심을 나눠준다.",
+          "effects": {
+            "seoyun": 3,
+            "harin": 3,
+            "sea": 3
+          },
+          "memory": null
+        },
+        {
+          "label": "문에 ‘점심 데이트 중’이라고 작게 덧붙인다.",
+          "effects": {
+            "seoyun": 5,
+            "sea": 1
+          },
+          "memory": "lunch_date"
+        }
+      ]
+    },
+    {
+      "id": "group-4",
+      "title": "칭찬 금지 대회",
+      "place": "낮은달",
+      "cast": [
+        "sea",
+        "yujin",
+        "seoyun"
+      ],
+      "minDay": 8,
+      "choices": [
+        {
+          "label": "유진 씨 오늘 머리핀 잘 어울리네요.",
+          "effects": {
+            "yujin": 5,
+            "seoyun": 1
+          },
+          "memory": "hairpin"
+        },
+        {
+          "label": "세아 씨는 칭찬을 못 참는 쪽이네요.",
+          "effects": {
+            "sea": 5
+          },
+          "memory": null
+        },
+        {
+          "label": "서윤 씨 웃는 얼굴도 좋으니까 나도 탈락할게요.",
+          "effects": {
+            "seoyun": 5,
+            "sea": 1
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "group-5",
+      "title": "달걀말이는 팀전이다",
+      "place": "주방",
+      "cast": [
+        "harin",
+        "yujin",
+        "isol"
+      ],
+      "minDay": 11,
+      "choices": [
+        {
+          "label": "하린의 시범 옆에서 같이 말아본다.",
+          "effects": {
+            "harin": 5,
+            "yujin": 1
+          },
+          "memory": "egg_harin"
+        },
+        {
+          "label": "이솔과 스크램블의 새 이름을 짓는다.",
+          "effects": {
+            "isol": 4,
+            "yujin": 3
+          },
+          "memory": null
+        },
+        {
+          "label": "유진과 실패 원인을 기록한다.",
+          "effects": {
+            "yujin": 5,
+            "harin": 1
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "group-6",
+      "title": "너무 잘 맞는 거짓말",
+      "place": "거실",
+      "cast": [
+        "sea",
+        "isol",
+        "harin"
+      ],
+      "minDay": 13,
+      "choices": [
+        {
+          "label": "이어폰 반대쪽을 내 귀에 꽂는다.",
+          "effects": {
+            "isol": 5,
+            "sea": 1
+          },
+          "memory": "fake_earphone"
+        },
+        {
+          "label": "하린에게도 같은 질문을 한다.",
+          "effects": {
+            "harin": 5,
+            "sea": 1
+          },
+          "memory": null
+        },
+        {
+          "label": "세아에게 먼저 모범 답안을 부탁한다.",
+          "effects": {
+            "sea": 5
+          },
+          "memory": "sea_answer"
+        }
+      ]
+    },
+    {
+      "id": "group-7",
+      "title": "편의점은 가까운데",
+      "place": "밤 골목",
+      "cast": [
+        "seoyun",
+        "yujin"
+      ],
+      "minDay": 16,
+      "choices": [
+        {
+          "label": "그럼 서윤 씨도 같이 한 묶음 해요.",
+          "effects": {
+            "seoyun": 5,
+            "yujin": 2
+          },
+          "memory": null
+        },
+        {
+          "label": "유진이 고른 간식을 하나씩 같이 산다.",
+          "effects": {
+            "yujin": 5,
+            "seoyun": 1
+          },
+          "memory": null
+        },
+        {
+          "label": "내가 계산할 테니 둘 다 좋아하는 걸 골라요.",
+          "effects": {
+            "seoyun": 3,
+            "yujin": 3
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "group-8",
+      "title": "소문은 계단을 타고",
+      "place": "회관 계단",
+      "cast": [
+        "harin",
+        "sea",
+        "yujin"
+      ],
+      "minDay": 19,
+      "choices": [
+        {
+          "label": "유진 씨, 같이 간식 먹으러 가요.",
+          "effects": {
+            "yujin": 4,
+            "harin": 1
+          },
+          "memory": null
+        },
+        {
+          "label": "하린 덕분에 살았어요. 조금만 더 털어줘.",
+          "effects": {
+            "harin": 5,
+            "sea": 1
+          },
+          "memory": "flour"
+        },
+        {
+          "label": "세아 씨 옷깃도 봐줄까요?",
+          "effects": {
+            "sea": 5
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "group-9",
+      "title": "작은 키링 셋",
+      "place": "기록실",
+      "cast": [
+        "yujin",
+        "isol",
+        "seoyun"
+      ],
+      "minDay": 22,
+      "choices": [
+        {
+          "label": "물건을 고른 순간이 기억난다고 말한다.",
+          "effects": {
+            "yujin": 3,
+            "isol": 3,
+            "seoyun": 3
+          },
+          "memory": "objects"
+        },
+        {
+          "label": "이솔에게 고양이 이름은 지었냐고 묻는다.",
+          "effects": {
+            "isol": 5,
+            "seoyun": 1
+          },
+          "memory": null
+        },
+        {
+          "label": "유진의 발표를 끝까지 듣는다.",
+          "effects": {
+            "yujin": 5
+          },
+          "memory": null
+        }
+      ]
+    },
+    {
+      "id": "group-10",
+      "title": "누구도 먼저 일어나지 않는 밤",
+      "place": "거실",
+      "cast": [
+        "harin",
+        "sea",
+        "yujin",
+        "seoyun",
+        "isol"
+      ],
+      "minDay": 25,
+      "choices": [
+        {
+          "label": "내일도 같이 저녁 먹자고 한다.",
+          "effects": {
+            "harin": 3,
+            "yujin": 3,
+            "sea": 2
+          },
+          "memory": "one_more"
+        },
+        {
+          "label": "소파를 조금 당겨 다 같이 앉는다.",
+          "effects": {
+            "seoyun": 4,
+            "isol": 4,
+            "harin": 1
+          },
+          "memory": "sofa"
+        },
+        {
+          "label": "지금 이 순간을 기억해둘게요.",
+          "effects": {
+            "sea": 4,
+            "yujin": 2,
+            "seoyun": 2
+          },
+          "memory": "remember_room"
+        }
+      ]
+    }
+  ]
+}
