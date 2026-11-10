@@ -1,6 +1,3 @@
-export const choice = (label, delta, response, flag = null) => ({ label, delta, response, flag });
-export const scene = (day, title, place, text, choices, extra = {}) => ({ day, title, place, text, choices, ...extra });
-export const ending = (title, subtitle, text) => ({ title, subtitle, text });
 export const characters = [
  {id:'harin',name:'윤하린',short:'하린',age:24,job:'새벽을 굽는 제빵사',color:'#bc6253',soft:'#f5dfcf',tag:'햇살 뒤의 진심',quote:'“내일 먹을 빵도, 같이 고를래요?”',description:'누구에게나 웃어주는 사람. 그런데 그 웃음이 사라지는 시간은 아무에게도 보여준 적 없다.',motif:'밀가루 묻은 앞치마 · 새벽 네 시 · 복숭아',theme:'괜찮다는 말 뒤에 숨겨둔 마음을 알아가는 이야기.'},
  {id:'sea',name:'차세아',short:'세아',age:28,job:'밤의 온도를 맞추는 바텐더',color:'#8b526e',soft:'#eadbe4',tag:'농담과 진심 사이',quote:'“오늘은 멋있는 말 말고, 솔직한 말 해봐.”',description:'먼저 다가오고 능숙하게 웃지만, 정작 자신의 이야기는 늘 농담의 끝에 숨긴다.',motif:'오렌지 껍질 · 영업 종료 후 · 빈 유리잔',theme:'능숙한 사람에게도 서툴러질 권리가 있다는 이야기.'},

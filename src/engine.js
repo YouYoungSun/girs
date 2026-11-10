@@ -1,54 +1,101 @@
-import {characters,common,routes,endings} from './story/index.js';
-export const VERSION=1;
-export const tiers=['best','good','normal','bad'];
-export const clamp=n=>Math.max(0,Math.min(100,n));
-export const endingTier=score=>score>=85?'best':score>=65?'good':score>=40?'normal':'bad';
+import {characters} from './story/helpers.js';
+import {days} from './life/days.js';
+import {visits} from './life/visits.js';
+import {messageEvent} from './life/messages.js';
+import {confessionEvent,finalResult} from './life/finale.js';
+export {characters,days,visits};
+export const VERSION=2,tiers=['best','good','normal','bad'];
 export const character=id=>characters.find(c=>c.id===id);
-export function createGame(name,focus){
-  if(!character(focus))throw new Error('알 수 없는 이야기입니다.');
-  const clean=String(name).trim().replace(/[\u0000-\u001f\u007f]/g,'').slice(0,12);
-  if(!clean)throw new Error('이름을 입력해주세요.');
-  return {version:VERSION,name:clean,focus,index:0,phase:'story',bonds:Object.fromEntries(characters.map(c=>[c.id,45])),flags:[],history:[],choice:null,updatedAt:Date.now()};
+export const clamp=n=>Math.max(0,Math.min(100,n));
+export const endingTier=n=>n>=85?'best':n>=65?'good':n>=40?'normal':'bad';
+export const format=(text,g)=>text.replaceAll('{name}',g.name);
+export function createGame(name){
+ const clean=String(name).trim().replace(/[\u0000-\u001f\u007f]/g,'').slice(0,12);
+ if(!clean)throw new Error('이름을 입력해주세요.');
+ return{version:VERSION,name:clean,day:1,beat:'morning',phase:'story',eventId:'day-1',focus:null,choice:null,bonds:Object.fromEntries(characters.map(c=>[c.id,25])),flags:[],seen:[],history:[],updatedAt:Date.now()};
 }
-export const timeline=focus=>[...common,...routes[focus]];
-export const currentScene=game=>timeline(game.focus)[game.index];
-export function format(text,game){return text.replaceAll('{name}',game.name).replaceAll('{focus}',character(game.focus).short);}
-export function sceneText(game){
-  const s=currentScene(game);if(!s)return '';
-  const parts=[];
-  if(s.memory)parts.push(game.flags.includes(s.memory.flag)?s.memory.yes:s.memory.no);
-  if(s.warm||s.cool)parts.push(game.bonds[game.focus]>=65?s.warm:s.cool);
-  parts.push(s.text);return format(parts.filter(Boolean).join('\n'),game);
+export function currentScene(g){
+ if(g.beat==='morning'&&g.eventId===`day-${g.day}`)return days[g.day-1];
+ if(g.beat==='free')return visits.find(e=>e.id===g.eventId);
+ if(g.beat==='night'&&g.eventId?.startsWith('message-')){const parts=g.eventId.split('-'),id=parts[1];if(character(id)&&Number(parts[2])===g.day/7-1)return messageEvent(id,g.day/7-1,g.bonds[id]);}
+ if(g.beat==='confession'&&character(g.focus))return confessionEvent(g.focus,g.bonds[g.focus]);
+ return undefined;
 }
-export function choiceOrder(game){
-  // Stable per scene: reloading does not rearrange the choices.
-  const key=game.index+characters.findIndex(c=>c.id===game.focus)*7;
-  return [[1,0,2],[2,1,0],[0,2,1],[1,2,0],[2,0,1],[0,1,2]][key%6];
+export const relation=n=>n>=85?'당신을 특별하게 바라보는 사이':n>=65?'둘만의 약속이 생긴 사이':n>=40?'먼저 안부가 궁금한 사이':'서로 알아가는 사이';
+const recalls={
+ 'day-7':['bread_blush','하린은 내 앞에 접시를 놓다가 눈이 마주치자 얼른 자기 자리로 돌아갔다. 시식 때 했던 말이 아직 남아 있는 모양이다.'],
+ 'day-9':['yujin_nerd','유진은 이 영화에 좋아하는 게임의 성우가 나온다며 작은 목소리로 알려줬다. 그 얘기는 나만 듣는 쪽이 좋았던 모양이다.'],
+ 'day-14':['shopping_rest','서윤은 가방을 내 쪽에 잠깐 맡기고 먼저 샌들을 벗었다. 지난 장보기 이후로 쉬는 일도 조금 익숙해진 것 같았다.'],
+ 'day-18':['board_isol','이솔이 게임 부스를 가리키며 내게만 말했다. “수업료 아이스크림, 오늘도 유효.” 먼저 약속을 기억해준 게 괜히 반가웠다.'],
+ 'day-24':['scary_sleeve','유진은 내 옆에 서려다 소매 끝을 봤다. 공포영화 얘기를 꺼내기도 전에 “그건 사고였어요”라고 작게 말했다.'],
+ 'day-27':['market_hand','세아는 지난번 야시장에서 잡았던 손을 기억하는지, 휴대전화 메시지에 손 그림 하나를 덧붙였다.'],
+ 'day-28':['less_annoying','이솔은 내 앞에만 사탕을 놓았다. “덜 귀찮게 하려고.” 익명 쪽지의 말투가 이번에는 바로 옆에서 들렸다.'],
+ 'harin-7':['harin_namebread','접시 옆에 내 이름 모양의 작은 빵이 하나 더 있었다. 하린은 이번에는 글씨 연습이라는 말도 안 했다.'],
+ 'sea-7':['sea_photo2','지갑에서 그날 같이 찍은 사진이 살짝 보였다. 내가 보자 세아는 숨기는 대신 “잘 가지고 있어”라고 말했다.'],
+ 'yujin-7':['yujin_friend','유진의 게임 접속 목록 맨 위에는 내 이름이 고정되어 있었다. 협동 이벤트 때문이라고 하기에는 이벤트가 끝난 지 며칠 됐다.'],
+ 'seoyun-7':['seoyun_firstname','내가 이름만 부르자 서윤이 바로 고개를 들었다. 그날 뒤뜰에서 허락받은 호칭이 이제 조금 자연스러워졌다.'],
+ 'isol-7':['isol_earphone','이솔은 파일을 열기 전에 이어폰 선을 정리했다. 지난번에는 짧다고 했던 선을 이번에는 넉넉하게 풀어뒀다.']
+};
+export function sceneText(g){const e=currentScene(g);if(!e)return'';const memory=recalls[e.id];return format((memory&&g.flags.includes(memory[0])?memory[1]+'\n':'')+e.text,g);}
+export function choiceOrder(g){const key=[...g.eventId].reduce((n,c)=>n+c.charCodeAt(0),g.day);return [[1,0,2],[2,1,0],[0,2,1],[1,2,0],[2,0,1],[0,1,2]][key%6];}
+export function availableVisits(g){
+ if(g.phase!=='activity')return[];
+ return [...characters.map(c=>c.id),'group'].map(lane=>{
+   const e=visits.find(v=>v.lane===lane&&v.minDay<=g.day&&!g.seen.includes(v.id));
+   return e;
+ }).filter(Boolean);
 }
-export function choose(game,index){
-  if(game.phase!=='story')throw new Error('이미 선택한 장면입니다.');
-  const s=currentScene(game),c=s?.choices[index];if(!c)throw new Error('선택지를 확인해주세요.');
-  const next=structuredClone(game),target=s.target==='focus'||!s.target?game.focus:s.target;
-  next.bonds[target]=clamp(next.bonds[target]+c.delta);
-  if(c.flag&&!next.flags.includes(c.flag))next.flags.push(c.flag);
-  next.history.push({index:game.index,title:s.title,day:s.day,text:sceneText(game),choice:format(c.label,game),response:format(c.response,game)});
-  next.choice=index;next.phase='response';next.updatedAt=Date.now();return next;
+export function visit(g,id){if(g.phase!=='activity'||!availableVisits(g).some(e=>e.id===id))throw new Error('지금은 갈 수 없는 곳입니다.');const n=structuredClone(g);n.phase='story';n.beat='free';n.eventId=id;n.choice=null;n.updatedAt=Date.now();return n;}
+export function contact(g,id){if(g.phase!=='messagePick'||!character(id))throw new Error('지금은 연락할 수 없습니다.');const n=structuredClone(g);n.phase='story';n.beat='night';n.eventId=`message-${id}-${g.day/7-1}`;n.choice=null;n.updatedAt=Date.now();return n;}
+export function choose(g,index){
+ if(g.phase!=='story')throw new Error('이미 선택한 장면입니다.');
+ const e=currentScene(g),c=e?.choices[index];if(!c)throw new Error('선택지를 확인해주세요.');
+ const n=structuredClone(g);for(const[id,delta]of Object.entries(c.effects)){if(character(id))n.bonds[id]=clamp(n.bonds[id]+delta);}
+ if(c.flag&&!n.flags.includes(c.flag))n.flags.push(c.flag);
+ n.history.push({id:e.id,title:e.title,day:g.day,cast:e.cast,text:sceneText(g),choice:format(c.label,g),response:format(c.response,g)});
+ if(!n.seen.includes(e.id))n.seen.push(e.id);
+ n.phase='response';n.choice=index;n.updatedAt=Date.now();return n;
 }
-export function advance(game){
-  if(game.phase!=='response')throw new Error('먼저 선택해주세요.');
-  const next=structuredClone(game);next.index++;next.choice=null;next.updatedAt=Date.now();
-  next.phase=next.index===timeline(next.focus).length?'ending':'story';return next;
+function nextDay(g){g.day++;g.beat='morning';g.phase='story';g.eventId=`day-${g.day}`;return g;}
+export function advance(g){
+ if(g.phase!=='response')throw new Error('먼저 선택해주세요.');
+ const n=structuredClone(g);n.choice=null;n.updatedAt=Date.now();
+ if(g.beat==='confession'){n.phase='ending';return n;}
+ if(g.beat==='morning'){
+   if(g.day===30){n.phase='confession';n.eventId=null;return n;}
+   n.phase='activity';n.eventId=null;return n;
+ }
+ if(g.beat==='free'&&g.day%7===0){n.phase='messagePick';n.beat='night';n.eventId=null;return n;}
+ return nextDay(n);
 }
-export const result=game=>({tier:endingTier(game.bonds[game.focus]),...endings[game.focus][endingTier(game.bonds[game.focus])]});
-export function validGame(value){
-  if(!value||value.version!==VERSION||!character(value.focus)||typeof value.name!=='string'||!value.name.trim()||value.name.length>12)return false;
-  const total=timeline(value.focus).length;
-  if(!Number.isInteger(value.index)||value.index<0||value.index>total||!['story','response','ending'].includes(value.phase))return false;
-  if((value.phase==='ending')!==(value.index===total))return false;
-  if(value.phase==='response'&&(!Number.isInteger(value.choice)||!currentScene(value)?.choices[value.choice]))return false;
-  if(value.phase!=='response'&&value.choice!==null)return false;
-  if(!value.bonds||characters.some(c=>!Number.isFinite(value.bonds[c.id])||value.bonds[c.id]<0||value.bonds[c.id]>100))return false;
-  if(!Array.isArray(value.flags)||value.flags.some(x=>typeof x!=='string')||value.flags.length>100)return false;
-  if(!Array.isArray(value.history)||value.history.length!==(value.phase==='response'?value.index+1:value.index))return false;
-  return value.history.every((h,i)=>h&&typeof h==='object'&&h.index===i&&Number.isInteger(h.day)&&typeof h.title==='string'&&typeof h.text==='string'&&typeof h.choice==='string'&&typeof h.response==='string'&&h.text.length<20000&&h.response.length<10000);
+export function confess(g,id){
+ if(g.phase!=='confession'||g.day!==30||g.focus!==null)throw new Error('마지막 날에만 마음을 전할 수 있습니다.');
+ if(id!==null&&!character(id))throw new Error('누구를 만나러 갈까요?');
+ const n=structuredClone(g);n.focus=id;n.choice=null;n.updatedAt=Date.now();
+ if(id===null){n.phase='ending';n.eventId=null;n.beat='confession';return n;}
+ n.beat='confession';n.phase='story';n.eventId=`confession-${id}`;return n;
+}
+export const result=g=>finalResult(g.focus,g.focus?endingTier(g.bonds[g.focus]):'friendship',g.flags);
+export function validGame(g){
+ try{
+ if(!g||g.version!==VERSION||typeof g.name!=='string'||!g.name.trim()||g.name.length>12)return false;
+ if(!Number.isInteger(g.day)||g.day<1||g.day>30||!['morning','free','night','confession'].includes(g.beat)||!['story','response','activity','messagePick','confession','ending'].includes(g.phase))return false;
+ if(g.focus!==null&&(!character(g.focus)||g.day!==30||g.beat!=='confession'))return false;
+ if(!g.bonds||characters.some(c=>!Number.isInteger(g.bonds[c.id])||g.bonds[c.id]<0||g.bonds[c.id]>100))return false;
+ if(!Array.isArray(g.flags)||g.flags.length>200||g.flags.some(f=>typeof f!=='string'||f.length>80))return false;
+ if(!Array.isArray(g.seen)||g.seen.length>100||new Set(g.seen).size!==g.seen.length||g.seen.some(f=>typeof f!=='string'))return false;
+ if(!Array.isArray(g.history)||g.history.length>100||g.history.length!==g.seen.length)return false;
+ if(!g.history.every((h,i)=>h&&h.id===g.seen[i]&&typeof h.title==='string'&&Number.isInteger(h.day)&&h.day>=1&&h.day<=g.day&&Array.isArray(h.cast)&&h.cast.every(id=>character(id))&&['text','choice','response'].every(k=>typeof h[k]==='string'&&h[k].length<20000)))return false;
+ if(!Number.isFinite(g.updatedAt))return false;
+ if(g.phase==='activity')return g.day<30&&g.beat==='morning'&&g.eventId===null&&g.choice===null&&g.seen.includes(`day-${g.day}`);
+ if(g.phase==='messagePick')return g.day%7===0&&g.beat==='night'&&g.eventId===null&&g.choice===null;
+ if(g.phase==='confession')return g.day===30&&g.beat==='morning'&&g.focus===null&&g.eventId===null&&g.choice===null;
+ if(g.phase==='ending')return g.day===30&&g.beat==='confession'&&g.choice===null&&g.seen.includes('day-30')&&(g.focus!==null?g.eventId===`confession-${g.focus}`&&g.seen.includes(g.eventId):g.eventId===null);
+ const e=currentScene(g);if(!e)return false;
+ if(g.beat==='night'&&g.day%7!==0)return false;
+ if(g.beat==='free'&&(e.minDay>g.day||g.day===30))return false;
+ if(g.beat==='confession'&&(g.focus===null||g.eventId!==`confession-${g.focus}`))return false;
+ if(g.phase==='story')return g.choice===null&&!g.seen.includes(e.id);
+ return Number.isInteger(g.choice)&&!!e.choices[g.choice]&&g.seen.at(-1)===e.id&&g.history.at(-1).day===g.day;
+ }catch{return false;}
 }

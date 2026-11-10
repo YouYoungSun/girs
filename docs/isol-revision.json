@@ -1,0 +1,6 @@
+{
+  "mode": "built-in image_gen edit",
+  "source": "assets/isol.png",
+  "output": "assets/isol-petite.png",
+  "prompt": "Edit this existing transparent full-body pixel-art sprite of Isol, a clearly ADULT 25-year-old woman sound engineer for a Korean romance visual novel. Preserve the hand-crafted crisp 16-bit pixel art style, original lavender/navy palette, headphones around neck, cassette recorder, understated reserved half-smile, and general identity. Change only her visual design toward a noticeably petite short ADULT woman with delicate slender proportions, very fair porcelain skin, a neat soft chin-length silver-lavender bob with straight light bangs, and a delicate doll-like illustrated beauty. Her age remains clearly adult in face, clothing and posture; not a child and not infant/chibi proportions. Oversized navy work jacket, lavender top, fitted dark high-waisted long trousers, white sneakers. Relaxed cool posture with one hand in pocket. Fully clothed, nonsexual. Small adult frame, slightly larger jacket emphasizing petite stature. Full body centered head to shoes entirely visible with transparent margins, no background, no floor or shadows. Preserve genuine transparent alpha. No text. All other game characters are outside scope and must not be added."
+}
