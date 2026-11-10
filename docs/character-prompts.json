@@ -1,0 +1,31 @@
+{
+  "mode": "built-in image_gen",
+  "transparent_background": true,
+  "characters": [
+    {
+      "id": "harin",
+      "path": "assets/harin.png",
+      "prompt": "Use case: stylized-concept. Asset type: transparent PNG character sprite for an original Korean seaside romance visual novel. A single clearly adult woman, full body, centered, facing slightly toward viewer, head to shoes entirely inside frame with generous transparent margins. Beautiful hand-crafted 16-bit pixel art with visible crisp square pixels, restrained 48-color palette, dark plum outlines, carefully shaded eyes, elegant adult anime proportions (not chibi), warm nostalgic summer mood. Consistent approximately 96x192 source-pixel detail scaled nearest neighbor. No words, no panels, no borders, no scenery, no floor, no shadow backdrop, no other people. Genuinely transparent alpha background. Harin, age 24. Cute cheerful adult baker, chestnut shoulder-length hair tied in two low loose pigtails with small peach ribbons, warm brown eyes, cream short-sleeve blouse, strawberry pink apron over a modest light summer skirt, comfortable brown loafers. Holds a small golden croissant on a paper bag, relaxed warm smile. Peach and cream palette."
+    },
+    {
+      "id": "sea",
+      "path": "assets/sea.png",
+      "prompt": "Use case: stylized-concept. Asset type: transparent PNG character sprite for an original Korean seaside romance visual novel. A single clearly adult woman, full body, centered, facing slightly toward viewer, head to shoes entirely inside frame with generous transparent margins. Beautiful hand-crafted 16-bit pixel art with visible crisp square pixels, restrained 48-color palette, dark plum outlines, carefully shaded eyes, elegant adult anime proportions (not chibi), warm nostalgic summer mood. Consistent approximately 96x192 source-pixel detail scaled nearest neighbor. No words, no panels, no borders, no scenery, no floor, no shadow backdrop, no other people. Genuinely transparent alpha background. Sea, age 28. Confident sophisticated adult bartender, wavy long dark burgundy hair, expressive amber eyes, small gold hoop earrings, flattering elegant sleeveless black fitted top with tasteful neckline, high-waisted plum midi skirt with a modest side slit, low black heels. One hand on hip, other loosely holding a stemmed glass with amber soda. Alluring stylish pose, composed teasing smile. Wine and gold palette; fully clothed."
+    },
+    {
+      "id": "yujin",
+      "path": "assets/yujin.png",
+      "prompt": "Use case: stylized-concept. Asset type: transparent PNG character sprite for an original Korean seaside romance visual novel. A single clearly adult woman, full body, centered, facing slightly toward viewer, head to shoes entirely inside frame with generous transparent margins. Beautiful hand-crafted 16-bit pixel art with visible crisp square pixels, restrained 48-color palette, dark plum outlines, carefully shaded eyes, elegant adult anime proportions (not chibi), warm nostalgic summer mood. Consistent approximately 96x192 source-pixel detail scaled nearest neighbor. No words, no panels, no borders, no scenery, no floor, no shadow backdrop, no other people. Genuinely transparent alpha background. Yujin, age 26. Thoughtful bookish adult archivist, straight blue-black chin-length bob, slim round gold glasses, subtle soft smile, ivory blouse under sage green cardigan, charcoal pleated knee-length skirt, neat dark loafers. Holds a tan clothbound notebook against her chest and one pencil. Sage, ink and ivory palette."
+    },
+    {
+      "id": "seoyun",
+      "path": "assets/seoyun.png",
+      "prompt": "Use case: stylized-concept. Asset type: transparent PNG character sprite for an original Korean seaside romance visual novel. A single clearly adult woman, full body, centered, facing slightly toward viewer, head to shoes entirely inside frame with generous transparent margins. Beautiful hand-crafted 16-bit pixel art with visible crisp square pixels, restrained 48-color palette, dark plum outlines, carefully shaded eyes, elegant adult anime proportions (not chibi), warm nostalgic summer mood. Consistent approximately 96x192 source-pixel detail scaled nearest neighbor. No words, no panels, no borders, no scenery, no floor, no shadow backdrop, no other people. Genuinely transparent alpha background. Seoyun, age 33. Warm dependable elegant older adult woman and arts venue director, long softly wavy dark brown hair draped over one shoulder, kind confident brown eyes, beige linen rolled-sleeve shirt, relaxed deep teal high-waisted trousers, leather sandals, simple brass watch. Hands in relaxed gesture, gentle knowing smile, mature face and adult proportions. Teal and sand palette."
+    },
+    {
+      "id": "isol",
+      "path": "assets/isol.png",
+      "prompt": "Use case: stylized-concept. Asset type: transparent PNG character sprite for an original Korean seaside romance visual novel. A single clearly adult woman, full body, centered, facing slightly toward viewer, head to shoes entirely inside frame with generous transparent margins. Beautiful hand-crafted 16-bit pixel art with visible crisp square pixels, restrained 48-color palette, dark plum outlines, carefully shaded eyes, elegant adult anime proportions (not chibi), warm nostalgic summer mood. Consistent approximately 96x192 source-pixel detail scaled nearest neighbor. No words, no panels, no borders, no scenery, no floor, no shadow backdrop, no other people. Genuinely transparent alpha background. Isol, age 25. Cool reserved adult female sound engineer, short tousled silver-lavender hair, blue-gray eyes, large studio headphones around neck, loose navy overshirt over muted lavender tee, dark utility trousers with a tiny keychain, white sneakers. One hand in pocket, holding a compact cassette recorder in other hand, small shy half-smile. Navy and lavender palette."
+    }
+  ]
+}

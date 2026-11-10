@@ -1,0 +1,10 @@
+export const choice = (label, delta, response, flag = null) => ({ label, delta, response, flag });
+export const scene = (day, title, place, text, choices, extra = {}) => ({ day, title, place, text, choices, ...extra });
+export const ending = (title, subtitle, text) => ({ title, subtitle, text });
+export const characters = [
+ {id:'harin',name:'윤하린',short:'하린',age:24,job:'새벽을 굽는 제빵사',color:'#bc6253',soft:'#f5dfcf',tag:'햇살 뒤의 진심',quote:'“내일 먹을 빵도, 같이 고를래요?”',description:'누구에게나 웃어주는 사람. 그런데 그 웃음이 사라지는 시간은 아무에게도 보여준 적 없다.',motif:'밀가루 묻은 앞치마 · 새벽 네 시 · 복숭아',theme:'괜찮다는 말 뒤에 숨겨둔 마음을 알아가는 이야기.'},
+ {id:'sea',name:'차세아',short:'세아',age:28,job:'밤의 온도를 맞추는 바텐더',color:'#8b526e',soft:'#eadbe4',tag:'농담과 진심 사이',quote:'“오늘은 멋있는 말 말고, 솔직한 말 해봐.”',description:'먼저 다가오고 능숙하게 웃지만, 정작 자신의 이야기는 늘 농담의 끝에 숨긴다.',motif:'오렌지 껍질 · 영업 종료 후 · 빈 유리잔',theme:'능숙한 사람에게도 서툴러질 권리가 있다는 이야기.'},
+ {id:'yujin',name:'백유진',short:'유진',age:26,job:'잊히는 것들을 모으는 기록자',color:'#5d7868',soft:'#dde8db',tag:'문장 밖의 마음',quote:'“이건 기록하지 않아도… 기억할 것 같아요.”',description:'정확한 날짜와 반듯한 목차를 좋아한다. 분류할 수 없는 감정 앞에서는 유독 말수가 줄어든다.',motif:'연필 여백 · 둥근 안경 · 반납되지 않은 책',theme:'모든 순간을 증명하지 않아도 마음은 남는다는 이야기.'},
+ {id:'seoyun',name:'한서윤',short:'서윤',age:33,job:'모두의 자리를 지키는 운영자',color:'#456f78',soft:'#dce6e4',tag:'기대어도 되는 어깨',quote:'“내 걱정도 해주는 사람이 생겼네.”',description:'고장 난 문부터 누군가의 저녁까지 챙기는 사람. 자신의 다음 계절만큼은 계속 미뤄두고 있다.',motif:'낡은 열쇠 · 접힌 여행 지도 · 두 잔의 차',theme:'누군가를 돌보는 사람이 자신의 삶도 선택하는 이야기.'},
+ {id:'isol',name:'강이솔',short:'이솔',age:25,job:'침묵까지 녹음하는 음향기사',color:'#756995',soft:'#e6e0ee',tag:'너에게 맞춘 주파수',quote:'“같이 들어. 이번엔 이어폰 하나씩.”',description:'쓸데없는 말은 싫다면서, 남들이 지나치는 소리에는 누구보다 오래 귀를 기울인다.',motif:'카세트테이프 · 방파제 · 한쪽 이어폰',theme:'말의 크기보다 듣는 방식으로 가까워지는 이야기.'}
+];
