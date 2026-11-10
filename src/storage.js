@@ -1,5 +1,5 @@
 import {validGame} from './engine.js';
-const PREFIX='afterglow:v2:';
+const PREFIX='afterglow:release-v1:';
 let warned=false;
 export function read(key,fallback=null){try{const raw=localStorage.getItem(PREFIX+key);return raw?JSON.parse(raw):fallback;}catch{return fallback;}}
 export function write(key,value){try{localStorage.setItem(PREFIX+key,JSON.stringify(value));return true;}catch{if(!warned){warned=true;window.dispatchEvent(new CustomEvent('storage-unavailable'));}return false;}}

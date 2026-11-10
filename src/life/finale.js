@@ -1,3 +1,5 @@
+import {endingTransition} from './ending-transitions.js';
+import {relationshipState,isRomantic} from './relationship-state.js';
 import {endingCopy} from './ending-copy.js';
 import {wounds} from './relationships.js';
 import {episode,pick,ids} from './helpers.js';
@@ -9,16 +11,19 @@ seoyun:{where:'열쇠를 내려놓은 뒤뜰',intro:'서윤|“왔네. 나도…
 isol:{where:'방송이 끝난 옥상',intro:'이솔은 헤드폰을 벗었다. 내 얼굴을 보더니 녹음기의 전원도 껐다.\n이솔|“응. 듣고 있어.”',best:['이어폰 없이도 같은 거리','이솔|“나도. 좋아해.”\n딱 세 단어였다. 더 긴 설명은 없었지만, 손을 잡는 속도만큼은 어느 대사보다 솔직했다.\n이솔|“지금 웃어도 돼. 나도 웃고 있으니까.”\n우리는 첫 방송이 끝난 날 분식집에서 만났다. 다음에는 게임센터, 그다음에는 아무 약속도 없는 산책. 조용한 사람과 사귀면 조용할 줄 알았는데, 그녀는 생각보다 잘 웃고 자주 내 이름을 불렀다.'],good:['짧은 답장, 긴 약속','이솔|“응. 나도 더 만나보고 싶어.”\n그녀가 내 손가락 끝을 조심스럽게 잡았다. 평소보다 훨씬 조심스러운 손이었다.\n우리의 연애는 답장이 짧아도 질문을 피하지 않는 약속으로 시작했다. 그녀가 ‘밥’이라고 보내면 나는 ‘같이?’라고 물었다. 어느 날부터는 묻기 전에 이미 의자가 두 개 준비돼 있었다.'],normal:['같은 노래를 떠올리는 사이','이솔|“너랑 있는 거 좋아. 근데 그 마음은… 아직 잘 모르겠어.”\n그녀는 모르는 걸 안다고 말하지 않았다. 나도 고개를 끄덕였다.\n이후에도 가끔 좋은 소리가 있으면 서로 보냈다. 대화는 짧았지만 회관에서 배운 말투를 알아듣는 사이였다. 그 여름의 음악을 들으면 조금 아쉽다. 그렇다고 다시 안 듣고 싶은 노래는 아니었다.'],bad:['조금 늦게 맞춘 주파수','이솔|“미안. 같은 마음은 아니야.”\n바람이 헤드폰 선을 흔들었다. 그녀는 내 대답을 기다렸고 나는 잘 지내라고 말했다.\n나는 이솔이 조용하다는 건 알았지만, 어떤 말에서 웃는지는 잘 몰랐다. 함께한 시간이 부족했던 마음은 마지막 용기만으로 채워지지 않았다. 내려오는 계단에서 다른 사람들의 목소리가 들렸다. 이 여름을 미워하고 싶지는 않았다.'],memory:['isol_cat','가방의 작은 고양이 키링은 그대로였다. 이솔은 새 가방을 살 때도 그것부터 옮겨 달았다. 안 좋아한다던 사람의 취향이 꽤 오래 갔다.']}
 };
 export function confessionEvent(id,bond,g={flags:[]}){
- const d=data[id],extra=bond>=65&&!wounds(id,g.flags).length?'상대가 먼저 한 걸음 가까워졌다. 내가 무슨 말을 하러 왔는지, 어쩌면 이미 알고 있는 눈이었다.':'조금 긴장한 얼굴이 내 쪽으로 돌아왔다. 나는 미리 정해둔 결말 대신, 지금 마음을 전하기로 했다.';
- return episode(`confession-${id}`,'너에게 하는 말',d.where,[id],((bond<40||wounds(id,g.flags).length)?'상대는 정리하던 일을 멈췄다. 잠깐 이야기해도 되냐고 묻자 고개를 끄덕였다. 둘 사이에는 한 걸음 거리가 남아 있었다.':d.intro)+'\n'+extra,[pick('좋아해. 여기서 끝나지 않았으면 좋겠어.','말을 마치고 상대를 바라봤다. 함께한 한 달이 이 대답까지 데려왔다.'),pick('너랑 보내는 평범한 날이 더 있었으면 해.','거창하게 꾸미지 않은 말이었다. 그렇지만 장난은 아니었다.'),pick('많이 서툴러도, 너를 더 알아가고 싶어.','상대가 내 말을 끝까지 들었다. 대답을 재촉하지 않고 기다렸다.')]);
+ const d=data[id],state=relationshipState(id,g),rom=isRomantic(id,g);
+ const intro=rom?d.intro:state==='closed'?'개인적인 만남을 마치기로 한 뒤였다. 잠깐 마음을 전하고 싶다고 묻자 상대가 내 말을 듣겠다고 했다. 나는 이전 결정을 바꿔달라고 요구하지 않기로 했다.':state==='friend'?'친구로 지내자는 말을 나눈 적이 있었다. 오늘 내 마음이 달라졌다는 건 말할 수 있어도, 상대의 답까지 같아졌다고 생각할 수는 없었다.':state==='deferred'?'지난번에는 마음을 정할 시간이 필요하다고 말했다. 오늘은 지금 내 마음을 솔직히 전하되, 상대의 대답을 기다리기로 했다.':'정리하던 일을 멈춘 상대에게 잠깐 이야기해도 되냐고 물었다. 아직 서로 마음을 확인한 사이는 아니었다.';
+ return episode(`confession-${id}`,'너에게 하는 말',d.where,[id],intro,[pick(state==='friend'?'전에 친구라고 했지만 내 마음이 달라졌어. 좋아해.':'좋아해. 여기서 끝나지 않았으면 좋겠어.','상대가 내 말을 끝까지 들었다. 다른 대답도 받아들일 생각으로 기다렸다.'),pick('너랑 보내는 평범한 날이 더 있었으면 해.','서로 어떤 시간을 보냈는지 생각하며 지금 내 마음을 전했다.'),pick('많이 서툴러도, 너를 더 알아가고 싶어.','말을 마치고 기다렸다. 상대가 어떤 답을 해야 한다고 정해두지는 않았다.')]);
 }
 export function finalResult(focus,tier,flags=[]){
  if(!focus)return{tier:'friendship',title:'다음 여름에도, 여섯 명',subtitle:'고백하지 않은 여름도 남는다',text:'“나 오늘은 다 같이 밥 먹고 싶어.”\n내 말에 하린이 냉장고를 열었다. 세아가 의자를 당겼고 유진이 단체방에 사진을 올렸다. 서윤은 열쇠를 내려놓고 앉았다. 이솔은 내 앞에 젓가락을 놓았다.\n좋아하는 마음이 모두 같은 이름일 필요는 없었다. 마지막 저녁은 처음 왔던 날처럼 조금 시끄러웠다. 다른 점은 이제 내가 어디에 앉아도 내 자리라는 것이었다.\n한 달 뒤 단체방이 다시 울렸다. ‘다들 주말에 시간 돼?’ 나는 제일 먼저 답장을 썼다. 이번 여름이 끝난 뒤에도, 우리 여섯 명은 남았다.'};
  const d=data[focus],[title,original]=d[tier];
  const hurt=wounds(focus,flags);
- const text=tier==='bad'?(hurt.length?endingCopy[focus].hurt:endingCopy[focus].bad):tier==='best'?endingCopy[focus].best:original;
+ const text=tier==='bad'?(hurt.length?endingCopy[focus].hurt:endingCopy[focus].bad):(endingCopy[focus][tier]||original);
  const unresolved=tier==='normal'&&hurt.length?'\n아직 풀지 못한 일이 있었다. 당장 연애를 시작하기보다, 말한 약속부터 지키기로 했다.':'';
+ let endingText=text;
+ if(focus==='sea'&&tier==='good')endingText=flags.includes('sea_noodle_date')?text.replace('첫 데이트 식당에서','다음 데이트에서도 같은 식당을 찾아갔을 때'):text;
  const memory=(tier==='best'||tier==='good')&&flags.includes(d.memory[0])?'\n'+d.memory[1]:'';
- return{tier,title,subtitle:focus,text:text+unresolved+memory};
+ return{tier,title,subtitle:focus,text:endingTransition(focus,tier,endingText)+unresolved+memory};
 }
 export const endingKeys=[...ids.flatMap(id=>['best','good','normal','bad'].map(t=>`${id}:${t}`)),'group:friendship'];

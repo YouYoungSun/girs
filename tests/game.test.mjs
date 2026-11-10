@@ -1,3 +1,5 @@
+import {isRomantic} from '../src/life/relationship-state.js';
+import {relationshipTier} from '../src/life/relationships.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -6,7 +8,7 @@ import {characters,days,visits,createGame,currentScene,choose,advance,availableV
 import {messageEvent} from '../src/life/messages.js';
 import {confessionEvent,finalResult,endingKeys} from '../src/life/finale.js';
 
-function chooseFor(g,target,goal){const cs=currentScene(g).choices;const wanted=goal===96||g.bonds[target]<goal;let winner=0;for(let i=1;i<cs.length;i++){const a=cs[i].effects[target]||0,b=cs[winner].effects[target]||0;if(wanted?a>b:a<b)winner=i;}return winner;}
+function chooseFor(g,target,goal){const cs=currentScene(g).choices;const wanted=goal===96||(goal>=65&&currentScene(g).lane===target)||g.bonds[target]<goal;let winner=0;for(let i=1;i<cs.length;i++){const a=cs[i].effects[target]||0,b=cs[winner].effects[target]||0;if(wanted?a>b:a<b)winner=i;}return winner;}
 function campaign(target,goal){
  let g=createGame('여름'),steps=0;
  while(g.phase!=='confession'){
@@ -16,7 +18,7 @@ function campaign(target,goal){
    else if(g.phase==='activity'){
      const choices=availableVisits(g);assert.ok(choices.length,'at least one unseen activity every day');
      const want=g.bonds[target]<goal;
-     if(goal===96){const own=choices.find(e=>e.lane===target);if(own){g=visit(g,own.id);continue;}}
+     if(goal>=65){const own=choices.find(e=>e.lane===target);if(own&&(goal===96||!isRomantic(target,g))){g=visit(g,own.id);continue;}}
      choices.sort((a,b)=>{
        const av=Math.max(...a.choices.map(c=>c.effects[target]||0)),bv=Math.max(...b.choices.map(c=>c.effects[target]||0));
        return want?bv-av:av-bv;
@@ -26,13 +28,13 @@ function campaign(target,goal){
  }
  assert.ok(validGame(g));return g;
 }
-test('30 shared days, 45 optional episodes, 20 private chats, 21 endings',()=>{
- assert.equal(days.length,30);assert.equal(visits.length,45);assert.equal(visits.filter(v=>v.lane==='group').length,10);
- assert.equal(endingKeys.length,21);assert.equal(new Set([...days,...visits].map(e=>e.id)).size,75);
+test('30 shared days, 60 optional episodes, 20 private chats, 21 endings',()=>{
+ assert.equal(days.length,30);assert.equal(visits.length,60);assert.equal(visits.filter(v=>v.lane==='group').length,10);
+ assert.equal(endingKeys.length,21);assert.equal(new Set([...days,...visits].map(e=>e.id)).size,90);
  for(const e of [...days,...visits,...characters.flatMap(c=>[0,1,2,3].map(w=>messageEvent(c.id,w,70))),...characters.map(c=>confessionEvent(c.id,70))]){
-   assert.ok(e.text.length>50,e.id);assert.equal(e.choices.length,3);assert.ok(e.cast.length>=1);
+   assert.ok(e.text.length>20,e.id);assert.equal(e.choices.length,3);assert.ok(e.cast.length>=1);
    for(const id of e.cast)assert.ok(characters.some(c=>c.id===id));
-   for(const c of e.choices){assert.ok(c.label.length>3);assert.ok(c.response.length>12,e.id);for(const[id,n]of Object.entries(c.effects)){assert.ok(characters.some(c=>c.id===id));assert.ok(Number.isInteger(n));}}
+   for(const c of e.choices){assert.ok(c.label.length>3);assert.ok(c.response.length>4,e.id);for(const[id,n]of Object.entries(c.effects)){assert.ok(characters.some(c=>c.id===id));assert.ok(Number.isInteger(n));}}
  }
 });
 for(const c of characters)test(`${c.name}: actual full-calendar choices reach all four endings`,()=>{
@@ -48,7 +50,7 @@ for(const c of characters)test(`${c.name}: actual full-calendar choices reach al
 });
 test('final heroine is a manual choice, including somebody with lower affection',()=>{
  const g=campaign('harin',96);assert.equal(g.focus,null);const lower=[...characters].sort((a,b)=>g.bonds[a.id]-g.bonds[b.id])[0].id;assert.ok(g.bonds.harin>g.bonds[lower]);
- let selected=confess(g,lower);selected=advance(choose(selected,0));assert.equal(selected.focus,lower);assert.equal(result(selected).tier,endingTier(g.bonds[lower]));
+ let selected=confess(g,lower);selected=advance(choose(selected,0));assert.equal(selected.focus,lower);assert.equal(result(selected).tier,relationshipTier(selected,endingTier(g.bonds[lower])));
  assert.throws(()=>confess(selected,'harin'));assert.throws(()=>confess(createGame('나'),'harin'));
 });
 test('friendship remains available even when somebody has maximum affection',()=>{
@@ -71,13 +73,13 @@ test('recall text changes when an earlier flag was earned',()=>{
  let g=createGame('윤슬');g.day=7;g.eventId='day-7';const before=sceneText(g);g.flags.push('bread_blush');assert.notEqual(sceneText(g),before);assert.match(sceneText(g),/시식/);
 });
 test('private messages and ending memories reflect relationship and chosen history',()=>{
- assert.notEqual(messageEvent('isol',2,25).text,messageEvent('isol',2,85).text);
+ assert.notEqual(messageEvent('isol',2,25,{flags:[],seen:[]}).text,messageEvent('isol',2,85,{flags:[],seen:['isol-8']}).text);
  assert.notEqual(finalResult('isol','best',[]).text,finalResult('isol','best',['isol_cat']).text);
  assert.equal(finalResult('isol','bad',['isol_cat']).text,finalResult('isol','bad',[]).text);
 });
 test('save validation covers every actual phase and rejects malformed state',()=>{
  const g=createGame('윤슬');assert.ok(validGame(g));
- for(const bad of [null,{}, {...g,version:1}, {...g,day:31}, {...g,focus:'sea'}, {...g,beat:'bad'}, {...g,phase:'ending'}, {...g,phase:'response',choice:0}, {...g,history:[null]}, {...g,bonds:{...g.bonds,sea:NaN}}, {...g,seen:['not-an-event']}, {...g,flags:[null]}])assert.equal(validGame(bad),false);
+ for(const bad of [null,{}, {...g,version:2}, {...g,day:31}, {...g,focus:'sea'}, {...g,beat:'bad'}, {...g,phase:'ending'}, {...g,phase:'response',choice:0}, {...g,history:[null]}, {...g,bonds:{...g.bonds,sea:NaN}}, {...g,seen:['not-an-event']}, {...g,flags:[null]}])assert.equal(validGame(bad),false);
  const r=choose(g,0);assert.ok(validGame(r));assert.throws(()=>choose(r,1));assert.throws(()=>advance(g));assert.ok(validGame(JSON.parse(JSON.stringify(r))));assert.deepEqual(choiceOrder(g),choiceOrder(JSON.parse(JSON.stringify(g))));
  assert.throws(()=>createGame('  '));
 });

@@ -1,11 +1,11 @@
-import {resolveScene,relationshipTier} from './life/relationships.js';
+import {resolveScene,relationshipTier,relationshipState} from './life/relationships.js';
 import {characters} from './story/helpers.js';
 import {days} from './life/days.js';
 import {visits} from './life/visits.js';
 import {messageEvent} from './life/messages.js';
 import {confessionEvent,finalResult} from './life/finale.js';
 export {characters,days,visits};
-export const VERSION=2,tiers=['best','good','normal','bad'];
+export const VERSION=1,tiers=['best','good','normal','bad'];
 export const character=id=>characters.find(c=>c.id===id);
 export const clamp=n=>Math.max(0,Math.min(100,n));
 export const endingTier=n=>n>=85?'best':n>=65?'good':n>=40?'normal':'bad';
@@ -13,7 +13,7 @@ export const format=(text,g)=>text.replaceAll('{name}',g.name);
 export function createGame(name){
  const clean=String(name).trim().replace(/[\u0000-\u001f\u007f]/g,'').slice(0,12);
  if(!clean)throw new Error('이름을 입력해주세요.');
- return{version:VERSION,name:clean,day:1,beat:'morning',phase:'story',eventId:'day-1',focus:null,choice:null,bonds:Object.fromEntries(characters.map(c=>[c.id,25])),flags:[],seen:[],history:[],updatedAt:Date.now()};
+ return{version:VERSION,edition:"release-v1",name:clean,day:1,beat:'morning',phase:'story',eventId:'day-1',focus:null,choice:null,bonds:Object.fromEntries(characters.map(c=>[c.id,25])),flags:[],seen:[],history:[],updatedAt:Date.now()};
 }
 export function currentScene(g){
  if(g.beat==='morning'&&g.eventId===`day-${g.day}`)return resolveScene(days[g.day-1],g);
@@ -31,19 +31,14 @@ const recalls={
  'day-24':['scary_sleeve','유진은 내 옆에 서려다 소매 끝을 봤다. 공포영화 얘기를 꺼내기도 전에 “그건 사고였어요”라고 작게 말했다.'],
  'day-27':['market_hand','세아는 지난번 야시장에서 잡았던 손을 기억하는지, 휴대전화 메시지에 손 그림 하나를 덧붙였다.'],
  'day-28':['less_annoying','이솔은 내 앞에만 사탕을 놓았다. “덜 귀찮게 하려고.” 익명 쪽지의 말투가 이번에는 바로 옆에서 들렸다.'],
- 'harin-7':['harin_namebread','접시 옆에 내 이름 모양의 작은 빵이 하나 더 있었다. 하린은 이번에는 글씨 연습이라는 말도 안 했다.'],
- 'sea-7':['sea_photo2','지갑에서 그날 같이 찍은 사진이 살짝 보였다. 내가 보자 세아는 숨기는 대신 “잘 가지고 있어”라고 말했다.'],
- 'yujin-7':['yujin_friend','유진의 게임 접속 목록 맨 위에는 내 이름이 고정되어 있었다. 협동 이벤트 때문이라고 하기에는 이벤트가 끝난 지 며칠 됐다.'],
- 'seoyun-7':['seoyun_firstname','내가 이름만 부르자 서윤이 바로 고개를 들었다. 그날 뒤뜰에서 허락받은 호칭이 이제 조금 자연스러워졌다.'],
- 'isol-7':['isol_earphone','이솔은 파일을 열기 전에 이어폰 선을 정리했다. 지난번에는 짧다고 했던 선을 이번에는 넉넉하게 풀어뒀다.']
 };
-export function sceneText(g){const e=currentScene(g);if(!e)return'';const memory=recalls[e.id];return format((memory&&g.flags.includes(memory[0])?memory[1]+'\n':'')+e.text,g);}
+export function sceneText(g){const e=currentScene(g);if(!e)return'';const memory=recalls[e.id];const blocked=memory&&characters.some(c=>memory[0].startsWith(c.id)||memory[1].includes(c.short)?['closed','friend','deferred'].includes(relationshipState(c.id,g)):false);return format((memory&&!blocked&&g.flags.includes(memory[0])?memory[1]+'\n':'')+e.text,g);}
 export function choiceOrder(g){const key=[...g.eventId].reduce((n,c)=>n+c.charCodeAt(0),g.day);return [[1,0,2],[2,1,0],[0,2,1],[1,2,0],[2,0,1],[0,1,2]][key%6];}
 export function availableVisits(g){
  if(g.phase!=='activity')return[];
  return [...characters.map(c=>c.id),'group'].map(lane=>{
    const e=visits.find(v=>v.lane===lane&&v.minDay<=g.day&&!g.seen.includes(v.id));
-   return e;
+   return e?resolveScene(e,g):e;
  }).filter(Boolean);
 }
 export function visit(g,id){if(g.phase!=='activity'||!availableVisits(g).some(e=>e.id===id))throw new Error('지금은 갈 수 없는 곳입니다.');const n=structuredClone(g);n.phase='story';n.beat='free';n.eventId=id;n.choice=null;n.updatedAt=Date.now();return n;}
@@ -53,6 +48,7 @@ export function choose(g,index){
  const e=currentScene(g),c=e?.choices[index];if(!c)throw new Error('선택지를 확인해주세요.');
  const n=structuredClone(g);for(const[id,delta]of Object.entries(c.effects)){if(character(id))n.bonds[id]=clamp(n.bonds[id]+delta);}
  if(c.flag&&!n.flags.includes(c.flag))n.flags.push(c.flag);
+ n.flags=n.flags.filter(f=>!(c.clearFlags||[]).includes(f));for(const f of c.setFlags||[])if(!n.flags.includes(f))n.flags.push(f);
  n.history.push({id:e.id,title:e.title,day:g.day,cast:e.cast,text:sceneText(g),choice:format(c.label,g),response:format(c.response,g)});
  if(!n.seen.includes(e.id))n.seen.push(e.id);
  n.phase='response';n.choice=index;n.updatedAt=Date.now();return n;
@@ -79,7 +75,7 @@ export function confess(g,id){
 export const result=g=>finalResult(g.focus,g.focus?relationshipTier(g,endingTier(g.bonds[g.focus])):'friendship',g.flags);
 export function validGame(g){
  try{
- if(!g||g.version!==VERSION||typeof g.name!=='string'||!g.name.trim()||g.name.length>12)return false;
+ if(!g||g.version!==VERSION||g.edition!=="release-v1"||typeof g.name!=='string'||!g.name.trim()||g.name.length>12)return false;
  if(!Number.isInteger(g.day)||g.day<1||g.day>30||!['morning','free','night','confession'].includes(g.beat)||!['story','response','activity','messagePick','confession','ending'].includes(g.phase))return false;
  if(g.focus!==null&&(!character(g.focus)||g.day!==30||g.beat!=='confession'))return false;
  if(!g.bonds||characters.some(c=>!Number.isInteger(g.bonds[c.id])||g.bonds[c.id]<0||g.bonds[c.id]>100))return false;
