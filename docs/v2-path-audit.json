@@ -32,7 +32,7 @@
       "ending": "group-ending-friendship",
       "choices": 3,
       "readingPages": 56,
-      "characters": 9010,
+      "characters": 8940,
       "decisions": [
         {
           "nodeId": "common-1-choice",
@@ -53,7 +53,7 @@
       "ending": "isol-ending-normal",
       "choices": 13,
       "readingPages": 158,
-      "characters": 23670,
+      "characters": 23766,
       "decisions": [
         {
           "nodeId": "common-1-choice",
@@ -114,7 +114,7 @@
       "ending": "isol-ending-bad",
       "choices": 13,
       "readingPages": 165,
-      "characters": 25063,
+      "characters": 24843,
       "decisions": [
         {
           "nodeId": "common-1-choice",
@@ -175,7 +175,7 @@
       "ending": "isol-ending-best",
       "choices": 13,
       "readingPages": 165,
-      "characters": 25060,
+      "characters": 24883,
       "decisions": [
         {
           "nodeId": "common-1-choice",
@@ -236,7 +236,7 @@
       "ending": "isol-ending-good",
       "choices": 13,
       "readingPages": 160,
-      "characters": 24267,
+      "characters": 24300,
       "decisions": [
         {
           "nodeId": "common-1-choice",
@@ -297,7 +297,7 @@
       "ending": "seoyun-ending-normal",
       "choices": 13,
       "readingPages": 180,
-      "characters": 22665,
+      "characters": 22860,
       "decisions": [
         {
           "nodeId": "common-1-choice",
@@ -358,7 +358,7 @@
       "ending": "seoyun-ending-bad",
       "choices": 13,
       "readingPages": 183,
-      "characters": 23027,
+      "characters": 23302,
       "decisions": [
         {
           "nodeId": "common-1-choice",
@@ -419,7 +419,7 @@
       "ending": "seoyun-ending-best",
       "choices": 13,
       "readingPages": 184,
-      "characters": 23328,
+      "characters": 23773,
       "decisions": [
         {
           "nodeId": "common-1-choice",
@@ -480,7 +480,7 @@
       "ending": "seoyun-ending-good",
       "choices": 13,
       "readingPages": 183,
-      "characters": 22975,
+      "characters": 23387,
       "decisions": [
         {
           "nodeId": "common-1-choice",
@@ -541,7 +541,7 @@
       "ending": "yujin-ending-normal",
       "choices": 13,
       "readingPages": 179,
-      "characters": 23203,
+      "characters": 23264,
       "decisions": [
         {
           "nodeId": "common-1-choice",
@@ -602,7 +602,7 @@
       "ending": "yujin-ending-bad",
       "choices": 13,
       "readingPages": 180,
-      "characters": 23384,
+      "characters": 23268,
       "decisions": [
         {
           "nodeId": "common-1-choice",
@@ -663,7 +663,7 @@
       "ending": "yujin-ending-good",
       "choices": 13,
       "readingPages": 180,
-      "characters": 23370,
+      "characters": 23483,
       "decisions": [
         {
           "nodeId": "common-1-choice",
@@ -724,7 +724,7 @@
       "ending": "yujin-ending-best",
       "choices": 13,
       "readingPages": 180,
-      "characters": 23567,
+      "characters": 23738,
       "decisions": [
         {
           "nodeId": "common-1-choice",
@@ -785,7 +785,7 @@
       "ending": "sea-ending-bad",
       "choices": 13,
       "readingPages": 155,
-      "characters": 23421,
+      "characters": 23362,
       "decisions": [
         {
           "nodeId": "common-1-choice",
@@ -846,7 +846,7 @@
       "ending": "sea-ending-normal",
       "choices": 13,
       "readingPages": 155,
-      "characters": 23463,
+      "characters": 23397,
       "decisions": [
         {
           "nodeId": "common-1-choice",
@@ -907,7 +907,7 @@
       "ending": "sea-ending-good",
       "choices": 13,
       "readingPages": 157,
-      "characters": 23814,
+      "characters": 23842,
       "decisions": [
         {
           "nodeId": "common-1-choice",
@@ -968,7 +968,7 @@
       "ending": "sea-ending-best",
       "choices": 13,
       "readingPages": 157,
-      "characters": 23814,
+      "characters": 23922,
       "decisions": [
         {
           "nodeId": "common-1-choice",
@@ -1029,7 +1029,7 @@
       "ending": "harin-ending-bad",
       "choices": 13,
       "readingPages": 154,
-      "characters": 24284,
+      "characters": 23989,
       "decisions": [
         {
           "nodeId": "common-1-choice",
@@ -1090,7 +1090,7 @@
       "ending": "harin-ending-normal",
       "choices": 13,
       "readingPages": 154,
-      "characters": 24357,
+      "characters": 24087,
       "decisions": [
         {
           "nodeId": "common-1-choice",
@@ -1151,7 +1151,7 @@
       "ending": "harin-ending-good",
       "choices": 13,
       "readingPages": 156,
-      "characters": 24678,
+      "characters": 24712,
       "decisions": [
         {
           "nodeId": "common-1-choice",
@@ -1212,7 +1212,7 @@
       "ending": "harin-ending-best",
       "choices": 13,
       "readingPages": 156,
-      "characters": 24832,
+      "characters": 25002,
       "decisions": [
         {
           "nodeId": "common-1-choice",
