@@ -1,0 +1,1272 @@
+{
+  "storyRevision": "v2-1",
+  "nodes": 1111,
+  "reachableEndings": 21,
+  "decisionStates": 37516,
+  "routes": [
+    {
+      "id": "harin",
+      "chapters": 7
+    },
+    {
+      "id": "sea",
+      "chapters": 7
+    },
+    {
+      "id": "yujin",
+      "chapters": 7
+    },
+    {
+      "id": "seoyun",
+      "chapters": 7
+    },
+    {
+      "id": "isol",
+      "chapters": 7
+    }
+  ],
+  "note": "Each row is one reachable representative path. Characters include narration and dialogue, not speaker labels or unchosen alternatives. This is not a measured human playtime.",
+  "paths": [
+    {
+      "route": "group",
+      "ending": "group-ending-friendship",
+      "choices": 3,
+      "readingPages": 56,
+      "characters": 9010,
+      "decisions": [
+        {
+          "nodeId": "common-1-choice",
+          "choiceId": "snack"
+        },
+        {
+          "nodeId": "common-2-choice",
+          "choiceId": "hide"
+        },
+        {
+          "nodeId": "common-3-route",
+          "choiceId": "group"
+        }
+      ]
+    },
+    {
+      "route": "isol",
+      "ending": "isol-ending-normal",
+      "choices": 13,
+      "readingPages": 158,
+      "characters": 23670,
+      "decisions": [
+        {
+          "nodeId": "common-1-choice",
+          "choiceId": "snack"
+        },
+        {
+          "nodeId": "common-2-choice",
+          "choiceId": "hide"
+        },
+        {
+          "nodeId": "common-3-route",
+          "choiceId": "isol"
+        },
+        {
+          "nodeId": "isol-1-song",
+          "choiceId": "hers"
+        },
+        {
+          "nodeId": "isol-2-date",
+          "choiceId": "more"
+        },
+        {
+          "nodeId": "isol-3-returnchoice",
+          "choiceId": "fit"
+        },
+        {
+          "nodeId": "isol-3-next",
+          "choiceId": "hers"
+        },
+        {
+          "nodeId": "isol-4-stay",
+          "choiceId": "rest"
+        },
+        {
+          "nodeId": "isol-5-meaning",
+          "choiceId": "guess"
+        },
+        {
+          "nodeId": "isol-5-reschedule",
+          "choiceId": "later"
+        },
+        {
+          "nodeId": "isol-6-answer",
+          "choiceId": "friend"
+        },
+        {
+          "nodeId": "isol-7-friendplan",
+          "choiceId": "music"
+        },
+        {
+          "nodeId": "isol-7-friendchoice",
+          "choiceId": "carry"
+        }
+      ]
+    },
+    {
+      "route": "isol",
+      "ending": "isol-ending-bad",
+      "choices": 13,
+      "readingPages": 165,
+      "characters": 25063,
+      "decisions": [
+        {
+          "nodeId": "common-1-choice",
+          "choiceId": "snack"
+        },
+        {
+          "nodeId": "common-2-choice",
+          "choiceId": "hide"
+        },
+        {
+          "nodeId": "common-3-route",
+          "choiceId": "isol"
+        },
+        {
+          "nodeId": "isol-1-song",
+          "choiceId": "hers"
+        },
+        {
+          "nodeId": "isol-2-date",
+          "choiceId": "more"
+        },
+        {
+          "nodeId": "isol-3-returnchoice",
+          "choiceId": "fit"
+        },
+        {
+          "nodeId": "isol-3-next",
+          "choiceId": "hers"
+        },
+        {
+          "nodeId": "isol-4-stay",
+          "choiceId": "rest"
+        },
+        {
+          "nodeId": "isol-5-meaning",
+          "choiceId": "guess"
+        },
+        {
+          "nodeId": "isol-5-reschedule",
+          "choiceId": "later"
+        },
+        {
+          "nodeId": "isol-6-answer",
+          "choiceId": "yes"
+        },
+        {
+          "nodeId": "isol-7-plan",
+          "choiceId": "together"
+        },
+        {
+          "nodeId": "isol-7-repair",
+          "choiceId": "avoid"
+        }
+      ]
+    },
+    {
+      "route": "isol",
+      "ending": "isol-ending-best",
+      "choices": 13,
+      "readingPages": 165,
+      "characters": 25060,
+      "decisions": [
+        {
+          "nodeId": "common-1-choice",
+          "choiceId": "snack"
+        },
+        {
+          "nodeId": "common-2-choice",
+          "choiceId": "hide"
+        },
+        {
+          "nodeId": "common-3-route",
+          "choiceId": "isol"
+        },
+        {
+          "nodeId": "isol-1-song",
+          "choiceId": "hers"
+        },
+        {
+          "nodeId": "isol-2-date",
+          "choiceId": "more"
+        },
+        {
+          "nodeId": "isol-3-returnchoice",
+          "choiceId": "fit"
+        },
+        {
+          "nodeId": "isol-3-next",
+          "choiceId": "hers"
+        },
+        {
+          "nodeId": "isol-4-stay",
+          "choiceId": "rest"
+        },
+        {
+          "nodeId": "isol-5-meaning",
+          "choiceId": "guess"
+        },
+        {
+          "nodeId": "isol-5-reschedule",
+          "choiceId": "later"
+        },
+        {
+          "nodeId": "isol-6-answer",
+          "choiceId": "yes"
+        },
+        {
+          "nodeId": "isol-7-plan",
+          "choiceId": "together"
+        },
+        {
+          "nodeId": "isol-7-repair",
+          "choiceId": "repair"
+        }
+      ]
+    },
+    {
+      "route": "isol",
+      "ending": "isol-ending-good",
+      "choices": 13,
+      "readingPages": 160,
+      "characters": 24267,
+      "decisions": [
+        {
+          "nodeId": "common-1-choice",
+          "choiceId": "snack"
+        },
+        {
+          "nodeId": "common-2-choice",
+          "choiceId": "hide"
+        },
+        {
+          "nodeId": "common-3-route",
+          "choiceId": "isol"
+        },
+        {
+          "nodeId": "isol-1-song",
+          "choiceId": "hers"
+        },
+        {
+          "nodeId": "isol-2-date",
+          "choiceId": "more"
+        },
+        {
+          "nodeId": "isol-3-returnchoice",
+          "choiceId": "fit"
+        },
+        {
+          "nodeId": "isol-3-next",
+          "choiceId": "hers"
+        },
+        {
+          "nodeId": "isol-4-stay",
+          "choiceId": "rest"
+        },
+        {
+          "nodeId": "isol-5-meaning",
+          "choiceId": "guess"
+        },
+        {
+          "nodeId": "isol-5-reschedule",
+          "choiceId": "make"
+        },
+        {
+          "nodeId": "isol-6-answer",
+          "choiceId": "yes"
+        },
+        {
+          "nodeId": "isol-7-plan",
+          "choiceId": "together"
+        },
+        {
+          "nodeId": "isol-7-finalchoice",
+          "choiceId": "quiet"
+        }
+      ]
+    },
+    {
+      "route": "seoyun",
+      "ending": "seoyun-ending-normal",
+      "choices": 13,
+      "readingPages": 180,
+      "characters": 22665,
+      "decisions": [
+        {
+          "nodeId": "common-1-choice",
+          "choiceId": "snack"
+        },
+        {
+          "nodeId": "common-2-choice",
+          "choiceId": "hide"
+        },
+        {
+          "nodeId": "common-3-route",
+          "choiceId": "seoyun"
+        },
+        {
+          "nodeId": "seoyun-1-lunch",
+          "choiceId": "divide"
+        },
+        {
+          "nodeId": "seoyun-2-time",
+          "choiceId": "return"
+        },
+        {
+          "nodeId": "seoyun-3-handoff",
+          "choiceId": "leave"
+        },
+        {
+          "nodeId": "seoyun-3-wait",
+          "choiceId": "assume"
+        },
+        {
+          "nodeId": "seoyun-4-day",
+          "choiceId": "friend"
+        },
+        {
+          "nodeId": "seoyun-5-expect",
+          "choiceId": "thanks"
+        },
+        {
+          "nodeId": "seoyun-5-love",
+          "choiceId": "friend"
+        },
+        {
+          "nodeId": "seoyun-6-duty",
+          "choiceId": "ask"
+        },
+        {
+          "nodeId": "seoyun-7-friend-course",
+          "choiceId": "outside"
+        },
+        {
+          "nodeId": "seoyun-7-friend-last",
+          "choiceId": "space"
+        }
+      ]
+    },
+    {
+      "route": "seoyun",
+      "ending": "seoyun-ending-bad",
+      "choices": 13,
+      "readingPages": 183,
+      "characters": 23027,
+      "decisions": [
+        {
+          "nodeId": "common-1-choice",
+          "choiceId": "snack"
+        },
+        {
+          "nodeId": "common-2-choice",
+          "choiceId": "hide"
+        },
+        {
+          "nodeId": "common-3-route",
+          "choiceId": "seoyun"
+        },
+        {
+          "nodeId": "seoyun-1-lunch",
+          "choiceId": "divide"
+        },
+        {
+          "nodeId": "seoyun-2-time",
+          "choiceId": "return"
+        },
+        {
+          "nodeId": "seoyun-3-handoff",
+          "choiceId": "leave"
+        },
+        {
+          "nodeId": "seoyun-3-wait",
+          "choiceId": "assume"
+        },
+        {
+          "nodeId": "seoyun-4-day",
+          "choiceId": "friend"
+        },
+        {
+          "nodeId": "seoyun-5-expect",
+          "choiceId": "thanks"
+        },
+        {
+          "nodeId": "seoyun-5-love",
+          "choiceId": "yes"
+        },
+        {
+          "nodeId": "seoyun-6-duty",
+          "choiceId": "ask"
+        },
+        {
+          "nodeId": "seoyun-7-course",
+          "choiceId": "rest"
+        },
+        {
+          "nodeId": "seoyun-7-repair",
+          "choiceId": "depend"
+        }
+      ]
+    },
+    {
+      "route": "seoyun",
+      "ending": "seoyun-ending-best",
+      "choices": 13,
+      "readingPages": 184,
+      "characters": 23328,
+      "decisions": [
+        {
+          "nodeId": "common-1-choice",
+          "choiceId": "snack"
+        },
+        {
+          "nodeId": "common-2-choice",
+          "choiceId": "hide"
+        },
+        {
+          "nodeId": "common-3-route",
+          "choiceId": "seoyun"
+        },
+        {
+          "nodeId": "seoyun-1-lunch",
+          "choiceId": "divide"
+        },
+        {
+          "nodeId": "seoyun-2-time",
+          "choiceId": "return"
+        },
+        {
+          "nodeId": "seoyun-3-handoff",
+          "choiceId": "leave"
+        },
+        {
+          "nodeId": "seoyun-3-wait",
+          "choiceId": "assume"
+        },
+        {
+          "nodeId": "seoyun-4-day",
+          "choiceId": "friend"
+        },
+        {
+          "nodeId": "seoyun-5-expect",
+          "choiceId": "thanks"
+        },
+        {
+          "nodeId": "seoyun-5-love",
+          "choiceId": "yes"
+        },
+        {
+          "nodeId": "seoyun-6-duty",
+          "choiceId": "ask"
+        },
+        {
+          "nodeId": "seoyun-7-course",
+          "choiceId": "rest"
+        },
+        {
+          "nodeId": "seoyun-7-repair",
+          "choiceId": "change"
+        }
+      ]
+    },
+    {
+      "route": "seoyun",
+      "ending": "seoyun-ending-good",
+      "choices": 13,
+      "readingPages": 183,
+      "characters": 22975,
+      "decisions": [
+        {
+          "nodeId": "common-1-choice",
+          "choiceId": "snack"
+        },
+        {
+          "nodeId": "common-2-choice",
+          "choiceId": "hide"
+        },
+        {
+          "nodeId": "common-3-route",
+          "choiceId": "seoyun"
+        },
+        {
+          "nodeId": "seoyun-1-lunch",
+          "choiceId": "divide"
+        },
+        {
+          "nodeId": "seoyun-2-time",
+          "choiceId": "return"
+        },
+        {
+          "nodeId": "seoyun-3-handoff",
+          "choiceId": "leave"
+        },
+        {
+          "nodeId": "seoyun-3-wait",
+          "choiceId": "assume"
+        },
+        {
+          "nodeId": "seoyun-4-day",
+          "choiceId": "friend"
+        },
+        {
+          "nodeId": "seoyun-5-expect",
+          "choiceId": "thanks"
+        },
+        {
+          "nodeId": "seoyun-5-love",
+          "choiceId": "yes"
+        },
+        {
+          "nodeId": "seoyun-6-duty",
+          "choiceId": "own"
+        },
+        {
+          "nodeId": "seoyun-7-course",
+          "choiceId": "rest"
+        },
+        {
+          "nodeId": "seoyun-7-soft",
+          "choiceId": "later"
+        }
+      ]
+    },
+    {
+      "route": "yujin",
+      "ending": "yujin-ending-normal",
+      "choices": 13,
+      "readingPages": 179,
+      "characters": 23203,
+      "decisions": [
+        {
+          "nodeId": "common-1-choice",
+          "choiceId": "snack"
+        },
+        {
+          "nodeId": "common-2-choice",
+          "choiceId": "hide"
+        },
+        {
+          "nodeId": "common-3-route",
+          "choiceId": "yujin"
+        },
+        {
+          "nodeId": "yujin-1-play",
+          "choiceId": "again"
+        },
+        {
+          "nodeId": "yujin-2-invite",
+          "choiceId": "work"
+        },
+        {
+          "nodeId": "yujin-3-expect",
+          "choiceId": "follow"
+        },
+        {
+          "nodeId": "yujin-3-meaning",
+          "choiceId": "dodge"
+        },
+        {
+          "nodeId": "yujin-4-feeling",
+          "choiceId": "friend"
+        },
+        {
+          "nodeId": "yujin-5-cancel",
+          "choiceId": "later"
+        },
+        {
+          "nodeId": "yujin-5-answer",
+          "choiceId": "connection"
+        },
+        {
+          "nodeId": "yujin-6-love",
+          "choiceId": "friend"
+        },
+        {
+          "nodeId": "yujin-7-next",
+          "choiceId": "together"
+        },
+        {
+          "nodeId": "yujin-7-friend-choice",
+          "choiceId": "leave"
+        }
+      ]
+    },
+    {
+      "route": "yujin",
+      "ending": "yujin-ending-bad",
+      "choices": 13,
+      "readingPages": 180,
+      "characters": 23384,
+      "decisions": [
+        {
+          "nodeId": "common-1-choice",
+          "choiceId": "snack"
+        },
+        {
+          "nodeId": "common-2-choice",
+          "choiceId": "hide"
+        },
+        {
+          "nodeId": "common-3-route",
+          "choiceId": "yujin"
+        },
+        {
+          "nodeId": "yujin-1-play",
+          "choiceId": "again"
+        },
+        {
+          "nodeId": "yujin-2-invite",
+          "choiceId": "work"
+        },
+        {
+          "nodeId": "yujin-3-expect",
+          "choiceId": "follow"
+        },
+        {
+          "nodeId": "yujin-3-meaning",
+          "choiceId": "dodge"
+        },
+        {
+          "nodeId": "yujin-4-feeling",
+          "choiceId": "friend"
+        },
+        {
+          "nodeId": "yujin-5-cancel",
+          "choiceId": "later"
+        },
+        {
+          "nodeId": "yujin-5-answer",
+          "choiceId": "connection"
+        },
+        {
+          "nodeId": "yujin-6-love",
+          "choiceId": "yes"
+        },
+        {
+          "nodeId": "yujin-7-next",
+          "choiceId": "together"
+        },
+        {
+          "nodeId": "yujin-7-repair",
+          "choiceId": "refuse"
+        }
+      ]
+    },
+    {
+      "route": "yujin",
+      "ending": "yujin-ending-good",
+      "choices": 13,
+      "readingPages": 180,
+      "characters": 23370,
+      "decisions": [
+        {
+          "nodeId": "common-1-choice",
+          "choiceId": "snack"
+        },
+        {
+          "nodeId": "common-2-choice",
+          "choiceId": "hide"
+        },
+        {
+          "nodeId": "common-3-route",
+          "choiceId": "yujin"
+        },
+        {
+          "nodeId": "yujin-1-play",
+          "choiceId": "again"
+        },
+        {
+          "nodeId": "yujin-2-invite",
+          "choiceId": "work"
+        },
+        {
+          "nodeId": "yujin-3-expect",
+          "choiceId": "follow"
+        },
+        {
+          "nodeId": "yujin-3-meaning",
+          "choiceId": "dodge"
+        },
+        {
+          "nodeId": "yujin-4-feeling",
+          "choiceId": "friend"
+        },
+        {
+          "nodeId": "yujin-5-cancel",
+          "choiceId": "later"
+        },
+        {
+          "nodeId": "yujin-5-answer",
+          "choiceId": "connection"
+        },
+        {
+          "nodeId": "yujin-6-love",
+          "choiceId": "yes"
+        },
+        {
+          "nodeId": "yujin-7-next",
+          "choiceId": "together"
+        },
+        {
+          "nodeId": "yujin-7-repair",
+          "choiceId": "repair"
+        }
+      ]
+    },
+    {
+      "route": "yujin",
+      "ending": "yujin-ending-best",
+      "choices": 13,
+      "readingPages": 180,
+      "characters": 23567,
+      "decisions": [
+        {
+          "nodeId": "common-1-choice",
+          "choiceId": "snack"
+        },
+        {
+          "nodeId": "common-2-choice",
+          "choiceId": "hide"
+        },
+        {
+          "nodeId": "common-3-route",
+          "choiceId": "yujin"
+        },
+        {
+          "nodeId": "yujin-1-play",
+          "choiceId": "again"
+        },
+        {
+          "nodeId": "yujin-2-invite",
+          "choiceId": "work"
+        },
+        {
+          "nodeId": "yujin-3-expect",
+          "choiceId": "follow"
+        },
+        {
+          "nodeId": "yujin-3-meaning",
+          "choiceId": "dodge"
+        },
+        {
+          "nodeId": "yujin-4-feeling",
+          "choiceId": "friend"
+        },
+        {
+          "nodeId": "yujin-5-cancel",
+          "choiceId": "later"
+        },
+        {
+          "nodeId": "yujin-5-answer",
+          "choiceId": "connection"
+        },
+        {
+          "nodeId": "yujin-6-love",
+          "choiceId": "yes"
+        },
+        {
+          "nodeId": "yujin-7-next",
+          "choiceId": "date"
+        },
+        {
+          "nodeId": "yujin-7-repair",
+          "choiceId": "repair"
+        }
+      ]
+    },
+    {
+      "route": "sea",
+      "ending": "sea-ending-bad",
+      "choices": 13,
+      "readingPages": 155,
+      "characters": 23421,
+      "decisions": [
+        {
+          "nodeId": "common-1-choice",
+          "choiceId": "snack"
+        },
+        {
+          "nodeId": "common-2-choice",
+          "choiceId": "hide"
+        },
+        {
+          "nodeId": "common-3-route",
+          "choiceId": "sea"
+        },
+        {
+          "nodeId": "sea-1-photo",
+          "choiceId": "work"
+        },
+        {
+          "nodeId": "sea-2-again",
+          "choiceId": "fun"
+        },
+        {
+          "nodeId": "sea-3-public",
+          "choiceId": "laugh"
+        },
+        {
+          "nodeId": "sea-3-confession",
+          "choiceId": "friend"
+        },
+        {
+          "nodeId": "sea-4-mood",
+          "choiceId": "rest"
+        },
+        {
+          "nodeId": "sea-5-reschedule",
+          "choiceId": "vague"
+        },
+        {
+          "nodeId": "sea-5-answer",
+          "choiceId": "joke"
+        },
+        {
+          "nodeId": "sea-6-recover",
+          "choiceId": "refuse"
+        },
+        {
+          "nodeId": "sea-7-next",
+          "choiceId": "wait"
+        },
+        {
+          "nodeId": "sea-7-final-talk",
+          "choiceId": "refuse"
+        }
+      ]
+    },
+    {
+      "route": "sea",
+      "ending": "sea-ending-normal",
+      "choices": 13,
+      "readingPages": 155,
+      "characters": 23463,
+      "decisions": [
+        {
+          "nodeId": "common-1-choice",
+          "choiceId": "snack"
+        },
+        {
+          "nodeId": "common-2-choice",
+          "choiceId": "hide"
+        },
+        {
+          "nodeId": "common-3-route",
+          "choiceId": "sea"
+        },
+        {
+          "nodeId": "sea-1-photo",
+          "choiceId": "work"
+        },
+        {
+          "nodeId": "sea-2-again",
+          "choiceId": "fun"
+        },
+        {
+          "nodeId": "sea-3-public",
+          "choiceId": "laugh"
+        },
+        {
+          "nodeId": "sea-3-confession",
+          "choiceId": "friend"
+        },
+        {
+          "nodeId": "sea-4-mood",
+          "choiceId": "rest"
+        },
+        {
+          "nodeId": "sea-5-reschedule",
+          "choiceId": "vague"
+        },
+        {
+          "nodeId": "sea-5-answer",
+          "choiceId": "joke"
+        },
+        {
+          "nodeId": "sea-6-recover",
+          "choiceId": "refuse"
+        },
+        {
+          "nodeId": "sea-7-next",
+          "choiceId": "wait"
+        },
+        {
+          "nodeId": "sea-7-final-talk",
+          "choiceId": "friend"
+        }
+      ]
+    },
+    {
+      "route": "sea",
+      "ending": "sea-ending-good",
+      "choices": 13,
+      "readingPages": 157,
+      "characters": 23814,
+      "decisions": [
+        {
+          "nodeId": "common-1-choice",
+          "choiceId": "snack"
+        },
+        {
+          "nodeId": "common-2-choice",
+          "choiceId": "hide"
+        },
+        {
+          "nodeId": "common-3-route",
+          "choiceId": "sea"
+        },
+        {
+          "nodeId": "sea-1-photo",
+          "choiceId": "work"
+        },
+        {
+          "nodeId": "sea-2-again",
+          "choiceId": "fun"
+        },
+        {
+          "nodeId": "sea-3-public",
+          "choiceId": "laugh"
+        },
+        {
+          "nodeId": "sea-3-confession",
+          "choiceId": "love"
+        },
+        {
+          "nodeId": "sea-4-mood",
+          "choiceId": "rest"
+        },
+        {
+          "nodeId": "sea-5-reschedule",
+          "choiceId": "vague"
+        },
+        {
+          "nodeId": "sea-5-answer",
+          "choiceId": "joke"
+        },
+        {
+          "nodeId": "sea-6-recover",
+          "choiceId": "refuse"
+        },
+        {
+          "nodeId": "sea-7-next",
+          "choiceId": "wait"
+        },
+        {
+          "nodeId": "sea-7-final-talk",
+          "choiceId": "repair"
+        }
+      ]
+    },
+    {
+      "route": "sea",
+      "ending": "sea-ending-best",
+      "choices": 13,
+      "readingPages": 157,
+      "characters": 23814,
+      "decisions": [
+        {
+          "nodeId": "common-1-choice",
+          "choiceId": "snack"
+        },
+        {
+          "nodeId": "common-2-choice",
+          "choiceId": "hide"
+        },
+        {
+          "nodeId": "common-3-route",
+          "choiceId": "sea"
+        },
+        {
+          "nodeId": "sea-1-photo",
+          "choiceId": "work"
+        },
+        {
+          "nodeId": "sea-2-again",
+          "choiceId": "fun"
+        },
+        {
+          "nodeId": "sea-3-public",
+          "choiceId": "laugh"
+        },
+        {
+          "nodeId": "sea-3-confession",
+          "choiceId": "love"
+        },
+        {
+          "nodeId": "sea-4-mood",
+          "choiceId": "rest"
+        },
+        {
+          "nodeId": "sea-5-reschedule",
+          "choiceId": "vague"
+        },
+        {
+          "nodeId": "sea-5-answer",
+          "choiceId": "joke"
+        },
+        {
+          "nodeId": "sea-6-recover",
+          "choiceId": "refuse"
+        },
+        {
+          "nodeId": "sea-7-next",
+          "choiceId": "set"
+        },
+        {
+          "nodeId": "sea-7-final-talk",
+          "choiceId": "repair"
+        }
+      ]
+    },
+    {
+      "route": "harin",
+      "ending": "harin-ending-bad",
+      "choices": 13,
+      "readingPages": 154,
+      "characters": 24284,
+      "decisions": [
+        {
+          "nodeId": "common-1-choice",
+          "choiceId": "snack"
+        },
+        {
+          "nodeId": "common-2-choice",
+          "choiceId": "hide"
+        },
+        {
+          "nodeId": "common-3-route",
+          "choiceId": "harin"
+        },
+        {
+          "nodeId": "harin-1-taste",
+          "choiceId": "gentle"
+        },
+        {
+          "nodeId": "harin-2-outing",
+          "choiceId": "rest"
+        },
+        {
+          "nodeId": "harin-3-load",
+          "choiceId": "all"
+        },
+        {
+          "nodeId": "harin-3-explain",
+          "choiceId": "avoid"
+        },
+        {
+          "nodeId": "harin-4-confession",
+          "choiceId": "friend"
+        },
+        {
+          "nodeId": "harin-5-plan",
+          "choiceId": "later"
+        },
+        {
+          "nodeId": "harin-5-listen",
+          "choiceId": "dismiss"
+        },
+        {
+          "nodeId": "harin-6-feeling",
+          "choiceId": "shut"
+        },
+        {
+          "nodeId": "harin-7-calendar",
+          "choiceId": "uncertain"
+        },
+        {
+          "nodeId": "harin-7-repair",
+          "choiceId": "refuse"
+        }
+      ]
+    },
+    {
+      "route": "harin",
+      "ending": "harin-ending-normal",
+      "choices": 13,
+      "readingPages": 154,
+      "characters": 24357,
+      "decisions": [
+        {
+          "nodeId": "common-1-choice",
+          "choiceId": "snack"
+        },
+        {
+          "nodeId": "common-2-choice",
+          "choiceId": "hide"
+        },
+        {
+          "nodeId": "common-3-route",
+          "choiceId": "harin"
+        },
+        {
+          "nodeId": "harin-1-taste",
+          "choiceId": "gentle"
+        },
+        {
+          "nodeId": "harin-2-outing",
+          "choiceId": "rest"
+        },
+        {
+          "nodeId": "harin-3-load",
+          "choiceId": "all"
+        },
+        {
+          "nodeId": "harin-3-explain",
+          "choiceId": "avoid"
+        },
+        {
+          "nodeId": "harin-4-confession",
+          "choiceId": "friend"
+        },
+        {
+          "nodeId": "harin-5-plan",
+          "choiceId": "later"
+        },
+        {
+          "nodeId": "harin-5-listen",
+          "choiceId": "dismiss"
+        },
+        {
+          "nodeId": "harin-6-feeling",
+          "choiceId": "shut"
+        },
+        {
+          "nodeId": "harin-7-calendar",
+          "choiceId": "uncertain"
+        },
+        {
+          "nodeId": "harin-7-repair",
+          "choiceId": "friend"
+        }
+      ]
+    },
+    {
+      "route": "harin",
+      "ending": "harin-ending-good",
+      "choices": 13,
+      "readingPages": 156,
+      "characters": 24678,
+      "decisions": [
+        {
+          "nodeId": "common-1-choice",
+          "choiceId": "snack"
+        },
+        {
+          "nodeId": "common-2-choice",
+          "choiceId": "hide"
+        },
+        {
+          "nodeId": "common-3-route",
+          "choiceId": "harin"
+        },
+        {
+          "nodeId": "harin-1-taste",
+          "choiceId": "gentle"
+        },
+        {
+          "nodeId": "harin-2-outing",
+          "choiceId": "rest"
+        },
+        {
+          "nodeId": "harin-3-load",
+          "choiceId": "all"
+        },
+        {
+          "nodeId": "harin-3-explain",
+          "choiceId": "avoid"
+        },
+        {
+          "nodeId": "harin-4-confession",
+          "choiceId": "love"
+        },
+        {
+          "nodeId": "harin-5-plan",
+          "choiceId": "later"
+        },
+        {
+          "nodeId": "harin-5-listen",
+          "choiceId": "dismiss"
+        },
+        {
+          "nodeId": "harin-6-feeling",
+          "choiceId": "shut"
+        },
+        {
+          "nodeId": "harin-7-calendar",
+          "choiceId": "uncertain"
+        },
+        {
+          "nodeId": "harin-7-repair",
+          "choiceId": "repair"
+        }
+      ]
+    },
+    {
+      "route": "harin",
+      "ending": "harin-ending-best",
+      "choices": 13,
+      "readingPages": 156,
+      "characters": 24832,
+      "decisions": [
+        {
+          "nodeId": "common-1-choice",
+          "choiceId": "snack"
+        },
+        {
+          "nodeId": "common-2-choice",
+          "choiceId": "hide"
+        },
+        {
+          "nodeId": "common-3-route",
+          "choiceId": "harin"
+        },
+        {
+          "nodeId": "harin-1-taste",
+          "choiceId": "gentle"
+        },
+        {
+          "nodeId": "harin-2-outing",
+          "choiceId": "rest"
+        },
+        {
+          "nodeId": "harin-3-load",
+          "choiceId": "all"
+        },
+        {
+          "nodeId": "harin-3-explain",
+          "choiceId": "avoid"
+        },
+        {
+          "nodeId": "harin-4-confession",
+          "choiceId": "love"
+        },
+        {
+          "nodeId": "harin-5-plan",
+          "choiceId": "later"
+        },
+        {
+          "nodeId": "harin-5-listen",
+          "choiceId": "dismiss"
+        },
+        {
+          "nodeId": "harin-6-feeling",
+          "choiceId": "shut"
+        },
+        {
+          "nodeId": "harin-7-calendar",
+          "choiceId": "date"
+        },
+        {
+          "nodeId": "harin-7-repair",
+          "choiceId": "repair"
+        }
+      ]
+    }
+  ]
+}
