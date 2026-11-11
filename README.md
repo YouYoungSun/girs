@@ -1,4 +1,4 @@
-# 여름의 마지막 페이지 · AFTERGLOW v2.0.1
+# 여름의 마지막 페이지 · AFTERGLOW v2.0.2
 
 v2.0.1에서는 하린 2장 「휴무」의 문체와 감정 흐름을 시범 수정했습니다. 전후 읽기본과 독립 검수 기록은 `docs/reference-notes/harin-2-edit-review.md`에 있습니다.
 
